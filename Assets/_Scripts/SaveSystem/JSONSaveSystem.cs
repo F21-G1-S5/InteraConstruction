@@ -32,7 +32,7 @@ public static class JSONSaveSystem
 
     public static PlayerData LoadPlayer(string filename)
     {
-        if (File.Exists(filePath))
+        if (File.Exists(filePath + filename + ".json"))
         {
             FileStream stream = new FileStream(filePath + filename + ".json", FileMode.Open);
             StreamReader sr = new StreamReader(stream);
