@@ -23,11 +23,12 @@ public class Pause_Resume : MonoBehaviour
        if(GamePaused)
         {
             Time.timeScale = 0;
-            
+            //Cursor.visible = true;
         }
         else
         {
             Time.timeScale = 1;
+            //Cursor.visible = false;
         }
     }
 
