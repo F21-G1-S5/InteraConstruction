@@ -1,0 +1,20 @@
+{
+	"User": "Instructor",
+	"Password": "Leader",
+	"Permission": "Full"	
+},
+{
+	"User": "Admin",
+	"Password": "Admin",
+	"Permission": "Admin"	
+},
+{
+	"User": "User",
+	"Password": "HereToLearn",
+	"Permission": "Basic"	
+},
+{
+	"User": "Tester",
+	"Password": "Test1",
+	"Permission": "All"	
+}
