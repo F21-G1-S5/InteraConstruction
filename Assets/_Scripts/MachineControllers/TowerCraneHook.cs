@@ -17,7 +17,7 @@ public class TowerCraneHook : MonoBehaviour{
     }
 
     private void FixedUpdate() {
-        /* Tests
+        /*Tests
         if (Input.GetKey(KeyCode.UpArrow))
             MoveHookUp();
         if (Input.GetKey(KeyCode.DownArrow))
