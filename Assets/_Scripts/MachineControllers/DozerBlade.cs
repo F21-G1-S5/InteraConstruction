@@ -14,7 +14,7 @@ public class DozerBlade : MonoBehaviour
 
     private void Start()
     {
-        bulldozerAudio.Play();
+        
         rootAngle = bladePivot.localRotation.x;
         Lift(lift);
     }
@@ -31,17 +31,16 @@ public class DozerBlade : MonoBehaviour
     {
         lift += amount;
         if (lift > maxLift) lift = maxLift;
-
         Quaternion bladeAngle = bladePivot.localRotation;
         bladeAngle.x = rootAngle - lift;
         bladePivot.localRotation = bladeAngle;
+        bulldozerAudio.Play();
     }
 
     public void Lower(float amount)
     {
         lift -= amount;
         if (lift < 0) lift = 0;
-
         Quaternion bladeAngle = bladePivot.localRotation;
         bladeAngle.x = rootAngle - lift;
         bladePivot.localRotation = bladeAngle;

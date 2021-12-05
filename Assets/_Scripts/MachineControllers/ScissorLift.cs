@@ -19,7 +19,6 @@ public class ScissorLift : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-		scissorliftAudio.Play();
 		goDown = 2;
 		goUp = 0;
 		topped = 0;
@@ -86,6 +85,7 @@ public class ScissorLift : MonoBehaviour
 
 	void Up() // Start raising the lift
 	{
+		scissorliftAudio.Play();
 		anim.SetFloat("Direction", 1);
 		anim.speed = 1.0f;
 		anim.Play("move", -1, float.NegativeInfinity);
@@ -95,6 +95,7 @@ public class ScissorLift : MonoBehaviour
 
 	void Down() // Start lowering the lift
 	{
+		scissorliftAudio.Play();
 		anim.SetFloat("Direction", -1);
 		anim.speed = 1.0f;
 		anim.Play("move", -1, float.NegativeInfinity);
