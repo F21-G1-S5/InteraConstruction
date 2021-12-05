@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: 5f2d7ec9cabd94c49bc1912693ce60db
+timeCreated: 1528133275
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_1a
+    100002: arm_1b
+    100004: arm_2a
+    100006: arm_2b
+    100008: arm_3a
+    100010: arm_3b
+    100012: arms
+    100014: back_body
+    100016: base
+    100018: bottom
+    100020: center_Body
+    100022: door1
+    100024: door2
+    100026: front_body
+    100028: holder1
+    100030: holder2
+    100032: left_body
+    100034: panel
+    100036: right_body
+    100038: //RootNode
+    100040: tank
+    100042: top
+    100044: wheel1
+    100046: wheel2
+    100048: wheel3
+    100050: wheel4
+    400000: arm_1a
+    400002: arm_1b
+    400004: arm_2a
+    400006: arm_2b
+    400008: arm_3a
+    400010: arm_3b
+    400012: arms
+    400014: back_body
+    400016: base
+    400018: bottom
+    400020: center_Body
+    400022: door1
+    400024: door2
+    400026: front_body
+    400028: holder1
+    400030: holder2
+    400032: left_body
+    400034: panel
+    400036: right_body
+    400038: //RootNode
+    400040: tank
+    400042: top
+    400044: wheel1
+    400046: wheel2
+    400048: wheel3
+    400050: wheel4
+    2300000: arm_1a
+    2300002: arm_1b
+    2300004: arm_2a
+    2300006: arm_2b
+    2300008: arm_3a
+    2300010: arm_3b
+    2300012: back_body
+    2300014: base
+    2300016: center_Body
+    2300018: door1
+    2300020: door2
+    2300022: front_body
+    2300024: holder1
+    2300026: holder2
+    2300028: left_body
+    2300030: panel
+    2300032: right_body
+    2300034: tank
+    2300036: wheel1
+    2300038: wheel2
+    2300040: wheel3
+    2300042: wheel4
+    3300000: arm_1a
+    3300002: arm_1b
+    3300004: arm_2a
+    3300006: arm_2b
+    3300008: arm_3a
+    3300010: arm_3b
+    3300012: back_body
+    3300014: base
+    3300016: center_Body
+    3300018: door1
+    3300020: door2
+    3300022: front_body
+    3300024: holder1
+    3300026: holder2
+    3300028: left_body
+    3300030: panel
+    3300032: right_body
+    3300034: tank
+    3300036: wheel1
+    3300038: wheel2
+    3300040: wheel3
+    3300042: wheel4
+    4300000: left_body
+    4300002: front_body
+    4300004: back_body
+    4300006: right_body
+    4300008: center_Body
+    4300010: wheel1
+    4300012: wheel2
+    4300014: wheel3
+    4300016: wheel4
+    4300018: tank
+    4300020: holder2
+    4300022: arm_1b
+    4300024: holder1
+    4300026: arm_1a
+    4300028: arm_2a
+    4300030: arm_2b
+    4300032: arm_3a
+    4300034: arm_3b
+    4300036: panel
+    4300038: base
+    4300040: door1
+    4300042: door2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
