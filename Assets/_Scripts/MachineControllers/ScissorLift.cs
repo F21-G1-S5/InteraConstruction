@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ScissorLift : MonoBehaviour
 {
-    private static Animator anim;
-    private static float animFrame;
-    private static int goUp;
-    private static int goDown;
-    private static int topped;
-    private static int bottomed;
+    private Animator anim;
+    private float animFrame;
+    private int goUp;
+    private int goDown;
+    private int topped;
+    private int bottomed;
 
 	public AudioSource scissorliftAudio;
 
@@ -26,18 +26,20 @@ public class ScissorLift : MonoBehaviour
 	}
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         animFrame = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
 
-        //if (Input.GetKeyDown(KeyCode.UpArrow)) {
-        //    Lift();
-        //}
-        //if (Input.GetKeyDown(KeyCode.DownArrow)) {
-        //    Lower();
-        //}
+		//if (Input.GetKeyDown(KeyCode.UpArrow))
+  //      {
+		//	Lift();
+  //      }
+		//if (Input.GetKeyDown(KeyCode.DownArrow))
+		//{
+		//	Lower();
+		//}
 
-        if (animFrame > upperLimit) // Check if we reched the top
+		if (animFrame > upperLimit) // Check if we reched the top
 		{
 			topMax();
 		}
@@ -47,7 +49,7 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public static void Lift()
+	public void Lift()
     {
 		switch (goUp)
 		{
@@ -64,7 +66,7 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public static void Lower()
+	public void Lower()
     {
 		switch (goDown)
 		{
@@ -81,7 +83,7 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public static void Up() // Start raising the lift
+	void Up() // Start raising the lift
 	{
 		scissorliftAudio.Play();
 		anim.SetFloat("Direction", 1);
@@ -91,7 +93,7 @@ public class ScissorLift : MonoBehaviour
 		goDown = 2;
 	}
 
-	public static void Down() // Start lowering the lift
+	void Down() // Start lowering the lift
 	{
 		scissorliftAudio.Play();
 		anim.SetFloat("Direction", -1);
@@ -101,7 +103,7 @@ public class ScissorLift : MonoBehaviour
 		goUp = 2;
 	}
 
-	public static void Pause() // Stop the lift where it is
+	void Pause() // Stop the lift where it is
 	{
 		goUp = 0;
 		goDown = 0;
@@ -110,7 +112,7 @@ public class ScissorLift : MonoBehaviour
 		anim.speed = 0.0f;
 	}
 
-	public static void topMax() // Stop if we reached the top
+	void topMax() // Stop if we reached the top
 	{
 		switch (topped)
 		{
@@ -128,7 +130,7 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public static void bottomMax() // Stop if we reached the bottom
+	void bottomMax() // Stop if we reached the bottom
 	{
 		switch (bottomed)
 		{
