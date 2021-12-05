@@ -13,6 +13,7 @@ public class ScissorLiftLifting : MonoBehaviour{
     }
 
     private void FixedUpdate() {
+        /*
         if (Input.GetKey(KeyCode.UpArrow)) {
             LiftUp();
         } else {
@@ -23,6 +24,7 @@ public class ScissorLiftLifting : MonoBehaviour{
         } else {
             
         }
+        */
     }
 
     private void LiftUp() {

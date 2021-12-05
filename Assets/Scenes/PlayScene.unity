@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44033214, g: 0.48890072, b: 0.5690673, a: 1}
+  m_IndirectSpecularColor: {r: 0.4403326, g: 0.48890126, b: 0.5690675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8346,6 +8346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 161152412}
+  forkliftAudio: {fileID: 0}
 --- !u!65 &270749042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43304,6 +43305,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 739705194}
+  forkliftAudio: {fileID: 0}
+--- !u!114 &1526020986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526020980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b5029a8228a594f8633401465a344a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1530692310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57797,6 +57811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 1427241496}
+  forkliftAudio: {fileID: 0}
 --- !u!65 &2192361222080024379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57810,6 +57825,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.6526375, y: 6.406727, z: 10.644945}
   m_Center: {x: -0.7096691, y: 2.7033634, z: 1.2177706}
+--- !u!114 &2192361222080024382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7242a24c6862549b33ea169dd02ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4098203729838515415
 PrefabInstance:
   m_ObjectHideFlags: 0
