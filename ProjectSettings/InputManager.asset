@@ -490,7 +490,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: h
+    positiveButton: 1
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -521,7 +521,7 @@ InputManager:
     m_Name: ScissorLift
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left
+    negativeButton: 
     positiveButton: 3
     altNegativeButton: 
     altPositiveButton: 
