@@ -11,12 +11,15 @@ public class ScissorLift : MonoBehaviour
     private int topped;
     private int bottomed;
 
+	public AudioSource scissorliftAudio;
+
 	[SerializeField][Range(0f, 1f)] float upperLimit = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+		scissorliftAudio.Play();
 		goDown = 2;
 		goUp = 0;
 		topped = 0;

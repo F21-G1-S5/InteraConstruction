@@ -12,10 +12,12 @@ public class TowerCrane : MonoBehaviour
     [SerializeField] Transform hookTop;
     [SerializeField] Transform hookBottom;
 
+    public AudioSource CraneAudio;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        CraneAudio.Play();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class TowerCrane : MonoBehaviour
 
     public void MoveTruck(float speed)
     {
+       
         carriage.Translate(new Vector3(speed, 0, 0), Space.Self);
         if (carriage.localPosition.x > carriageInner.localPosition.x)
         {
