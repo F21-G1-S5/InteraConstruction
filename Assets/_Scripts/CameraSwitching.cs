@@ -8,6 +8,7 @@ public class CameraSwitching : MonoBehaviour
     public GameObject camBulldozer;
     public GameObject camScissorLift;
     public GameObject MainCamera;
+    //public GameObject miniMapCamera;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class CameraSwitching : MonoBehaviour
             camBulldozer.SetActive(false);
             camScissorLift.SetActive(false);
             MainCamera.SetActive(false);
+            
         }
         if (Input.GetButtonDown("Bulldozer"))
         {
