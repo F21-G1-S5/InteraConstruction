@@ -11,6 +11,8 @@ public class ScissorLift : MonoBehaviour
     private int topped;
     private int bottomed;
 
+	public AudioSource scissorliftAudio;
+
 	[SerializeField][Range(0f, 1f)] float upperLimit = 1f;
 
     // Start is called before the first frame update
@@ -83,6 +85,7 @@ public class ScissorLift : MonoBehaviour
 
 	void Up() // Start raising the lift
 	{
+		scissorliftAudio.Play();
 		anim.SetFloat("Direction", 1);
 		anim.speed = 1.0f;
 		anim.Play("move", -1, float.NegativeInfinity);
@@ -92,6 +95,7 @@ public class ScissorLift : MonoBehaviour
 
 	void Down() // Start lowering the lift
 	{
+		scissorliftAudio.Play();
 		anim.SetFloat("Direction", -1);
 		anim.speed = 1.0f;
 		anim.Play("move", -1, float.NegativeInfinity);
