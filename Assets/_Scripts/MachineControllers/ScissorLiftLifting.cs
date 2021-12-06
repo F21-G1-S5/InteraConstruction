@@ -7,6 +7,9 @@ public class ScissorLiftLifting : MonoBehaviour{
     private Transform platform;
     private Animator animator;
 
+    public AudioSource scissorliftAudio;
+    public AudioSource LiftAudio;
+
     private void Start() {
         platform=transform.Find("top").transform;
         animator=GetComponent<Animator>();
@@ -29,11 +32,13 @@ public class ScissorLiftLifting : MonoBehaviour{
 
     private void LiftUp() {
         ScissorLift.Lift();
+        LiftAudio.Play();
         platform.localPosition=new Vector3(platform.localPosition.x,platform.localPosition.y+liftSpeed,platform.localPosition.z);
     }
 
     private void LiftDown() {
         ScissorLift.Lower();
+        LiftAudio.Play();
         platform.localPosition=new Vector3(platform.localPosition.x,platform.localPosition.y+liftSpeed,platform.localPosition.z);
     }
 }

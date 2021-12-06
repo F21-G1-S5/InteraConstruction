@@ -8,7 +8,8 @@ public class DozerBlade : MonoBehaviour
     [SerializeField] float maxLift = 1; // max angle rads
     [SerializeField] float lift = 0; // initial angle in radss
 
-    public AudioSource bulldozerAudio;
+    //public AudioSource bulldozerAudio;
+    public AudioSource LiftAudio;
 
     private float rootAngle;
 
@@ -34,7 +35,7 @@ public class DozerBlade : MonoBehaviour
         Quaternion bladeAngle = bladePivot.localRotation;
         bladeAngle.x = rootAngle - lift;
         bladePivot.localRotation = bladeAngle;
-        bulldozerAudio.Play();
+        LiftAudio.Play();
     }
 
     public void Lower(float amount)
@@ -44,5 +45,6 @@ public class DozerBlade : MonoBehaviour
         Quaternion bladeAngle = bladePivot.localRotation;
         bladeAngle.x = rootAngle - lift;
         bladePivot.localRotation = bladeAngle;
+        LiftAudio.Play();
     }
 }

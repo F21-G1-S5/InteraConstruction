@@ -5,7 +5,6 @@ using UnityEngine;
 public class PromptTutDes : MonoBehaviour
 {
     public GameObject uiObject;
-    public AudioSource forkliftAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +22,12 @@ public class PromptTutDes : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             uiObject.SetActive(true);
-            forkliftAudio.Play();
             StartCoroutine("WaitForSec");
         }
     }
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(4);
-        forkliftAudio.Stop();
         uiObject.SetActive(false);
         //Destroy(gameObject);
     }
