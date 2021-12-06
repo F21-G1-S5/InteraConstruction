@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44033214, g: 0.48890048, b: 0.56906664, a: 1}
+  m_IndirectSpecularColor: {r: 0.44033214, g: 0.48890072, b: 0.5690673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8522,6 +8522,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &270749043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 680933818240077887, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+  m_PrefabInstance: {fileID: 4098203729838515415}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270749040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a4fcbd194ebde4b8530f54f43afacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &270749044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 160151701354990218, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
@@ -8539,6 +8550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bae314a795cf7489c21990c8d2e976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dozerBlade: {fileID: 270749043}
+  bladeSpeed: 0.25
 --- !u!1001 &272505757
 PrefabInstance:
   m_ObjectHideFlags: 0

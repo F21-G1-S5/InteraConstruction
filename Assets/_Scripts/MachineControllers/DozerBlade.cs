@@ -35,7 +35,6 @@ public class DozerBlade : MonoBehaviour
         Quaternion bladeAngle = bladePivot.localRotation;
         bladeAngle.x = rootAngle - lift;
         bladePivot.localRotation = bladeAngle;
-        LiftAudio.Play();
     }
 
     public void Lower(float amount)
@@ -45,6 +44,18 @@ public class DozerBlade : MonoBehaviour
         Quaternion bladeAngle = bladePivot.localRotation;
         bladeAngle.x = rootAngle - lift;
         bladePivot.localRotation = bladeAngle;
-        LiftAudio.Play();
+    }
+
+    public void PlayLiftAudio()
+    {
+        if (!LiftAudio.isPlaying)
+        {
+            LiftAudio.Play();
+        }
+    }
+
+    public void StopLiftAudio()
+    {
+        LiftAudio.Stop();
     }
 }
