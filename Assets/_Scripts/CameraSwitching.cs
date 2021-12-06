@@ -10,6 +10,10 @@ public class CameraSwitching : MonoBehaviour
     public GameObject MainCamera;
     //public GameObject miniMapCamera;
 
+    public static bool playerInVehicle = false;
+    public static bool inScissorLift = false;
+    public static bool inBulldozer = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +28,8 @@ public class CameraSwitching : MonoBehaviour
         }
         if (Input.GetButtonDown("Bulldozer"))
         {
+            playerInVehicle = true;
+            inBulldozer = true;
             camCrane.SetActive(false);
             camBulldozer.SetActive(true);
             camScissorLift.SetActive(false);
@@ -31,6 +37,8 @@ public class CameraSwitching : MonoBehaviour
         }
         if (Input.GetButtonDown("ScissorLift"))
         {
+            playerInVehicle = true;
+            inScissorLift = true;
             camCrane.SetActive(false);
             camBulldozer.SetActive(false);
             camScissorLift.SetActive(true);
