@@ -21,7 +21,7 @@ public class BulldozerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CameraSwitching.playerInVehicle)
+        if (CameraSwitching.inBulldozer)
         {
             // controls for moving the bulldozer
             var h = Input.GetAxisRaw("Horizontal");
