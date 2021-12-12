@@ -21,6 +21,14 @@ public class MenuHandler : MonoBehaviour
     
     }
 
+    public void LoadFromSave(string sceneName)
+    {
+        GameObject go = new GameObject("TriggerLoadOnStart");
+        Object.DontDestroyOnLoad(go);
+
+        SceneManager.LoadScene(sceneName);
+    }
+
     // Update is called once per frame
     void Update()
     {

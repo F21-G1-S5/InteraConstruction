@@ -15,6 +15,14 @@ public class Pause_Resume : MonoBehaviour
     void Start()
     {
         GamePaused = false;
+
+        GameObject go = GameObject.Find("TriggerLoadOnStart");
+
+        if (go != null)
+        {
+            LoadGame();
+            Destroy(go);
+        }
     }
 
     // Update is called once per frame
