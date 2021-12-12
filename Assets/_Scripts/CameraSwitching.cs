@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// CameraSwitching toggles cameras (and relevant components) on/off fepending on which perspective the player is using
 public class CameraSwitching : MonoBehaviour
 {
     public GameObject camCrane;
