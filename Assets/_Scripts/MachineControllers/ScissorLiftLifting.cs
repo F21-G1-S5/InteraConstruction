@@ -16,28 +16,16 @@ public class ScissorLiftLifting : MonoBehaviour{
     }
 
     private void FixedUpdate() {
-        /*
-        if (Input.GetKey(KeyCode.UpArrow)) {
-            LiftUp();
-        } else {
-           
-        }
-        if (Input.GetKey(KeyCode.DownArrow)) {
-            LiftDown();
-        } else {
-            
-        }
-        */
     }
 
     private void LiftUp() {
-        ScissorLift.Lift();
+        //ScissorLift.Lift();
         LiftAudio.Play();
         platform.localPosition=new Vector3(platform.localPosition.x,platform.localPosition.y+liftSpeed,platform.localPosition.z);
     }
 
     private void LiftDown() {
-        ScissorLift.Lower();
+        //ScissorLift.Lower();
         LiftAudio.Play();
         platform.localPosition=new Vector3(platform.localPosition.x,platform.localPosition.y+liftSpeed,platform.localPosition.z);
     }
