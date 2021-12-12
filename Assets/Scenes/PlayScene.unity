@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camCrane: {fileID: 1983808293}
+  craneController: {fileID: 2192361222080024383}
   camBulldozer: {fileID: 1498575686}
   camScissorLift: {fileID: 2078885914}
   MainCamera: {fileID: 2057534676}
@@ -626,7 +627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &17642346
 PrefabInstance:
@@ -8953,7 +8954,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: c3bf0e90a456c1d478001d0311367c13, type: 2}
   m_audioClip: {fileID: 8300000, guid: 319172c4f72216a439a4786f5b3c5cef, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.513
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12337,7 +12338,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &432021589
 PrefabInstance:
@@ -52906,6 +52907,11 @@ Transform:
   m_Father: {fileID: 1332158029}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1865548137 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2196637023748728699, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+  m_PrefabInstance: {fileID: 2192361222080024376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1868942159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55447,12 +55453,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983808293}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 26.968, y: 25.7185, z: 14.771}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 0.32289124, y: -0.0061919205, z: 2.480818}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 1865548137}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &1988421924
 GameObject:
@@ -58975,6 +58981,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.962967, y: 6.406727, z: 14.375448}
   m_Center: {x: -0.69078445, y: 2.7033634, z: 1.6064024}
+--- !u!114 &2192361222080024380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2191723697642524750, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+  m_PrefabInstance: {fileID: 2192361222080024376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ec7e10d717bda41aea32df5e6c7d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2192361222080024382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58982,11 +58999,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2192361222080024377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca7242a24c6862549b33ea169dd02ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2192361222080024383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024377}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9525f4998e43fa94698844c8084bdd4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crane: {fileID: 2192361222080024380}
+  rotateSpeed: 10
+  truckSpeed: 1
+  hookSpeed: 1
 --- !u!1001 &4098203729838515415
 PrefabInstance:
   m_ObjectHideFlags: 0
