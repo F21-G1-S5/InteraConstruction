@@ -57,6 +57,13 @@ public class Pause_Resume : MonoBehaviour
     public void LoadGame()
     {
         PlayerData pData = JSONSaveSystem.LoadPlayer("savefile1");
+        
+        // disable character controller to allow for setting the player position
+        CharacterController cc = player.GetComponent<CharacterController>();
+        if (cc != null)
+        {
+            cc.enabled = false;
+        }
 
         if (pData != null)
         {
@@ -66,6 +73,11 @@ public class Pause_Resume : MonoBehaviour
         else
         {
             Debug.Log("received null data object");
+        }
+
+        if (cc != null)
+        {
+            cc.enabled = true;
         }
     }
 }
