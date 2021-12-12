@@ -4639,9 +4639,9 @@ RectTransform:
   m_Father: {fileID: 52365233}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -369}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 129, y: 49}
   m_SizeDelta: {x: 256.9807, y: 94.4075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161152414
@@ -20145,9 +20145,9 @@ RectTransform:
   m_Father: {fileID: 52365233}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -369}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 133, y: 49}
   m_SizeDelta: {x: 256.9807, y: 94.4075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739705196
@@ -28699,8 +28699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 6.1856}
-  m_SizeDelta: {x: 322.5922, y: 154.6105}
+  m_AnchoredPosition: {x: -2, y: -24}
+  m_SizeDelta: {x: 322.5922, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034400667
 MonoBehaviour:
@@ -28735,13 +28735,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The Bulldozer, also called Dozer, is a powerful machine that is use for
+  m_Text: "The Bulldozer, also called Dozer, is a powerful machine that is use for
     pushing earth or rocks, used in road building, farming, construction, and wrecking;
     it consists of a heavy, broad steel blade or plate mounted on the front of a
-    tractor.
-
-
-    To use: Press...'
+    tractor.\n\nHow To use: \n- Use W To drive forward and S to drive back\n- Use
+    A to rotate left and D to rotate right\n- Use Right Click to raise blade and
+    Left Click to raise"
 --- !u!222 &1034400668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40104,9 +40103,9 @@ RectTransform:
   m_Father: {fileID: 52365233}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -369}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 132, y: 49}
   m_SizeDelta: {x: 256.9807, y: 94.4075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427241498
@@ -50165,8 +50164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 8.1217}
-  m_SizeDelta: {x: 304.5221, y: 150.7383}
+  m_AnchoredPosition: {x: 1, y: -25.5}
+  m_SizeDelta: {x: 400, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769176885
 MonoBehaviour:
@@ -50201,13 +50200,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'A crane is a piece of heavy machinery that is a tower or platform that
+  m_Text: "A crane is a piece of heavy machinery that is a tower or platform that
     is equipped with cables and pulleys. They are used to lift and lower materials.
     The most common use of cranes is in the construction industry and heavy equipment
-    manufacturing.
-
-
-    To use: Press...'
+    manufacturing.\n\nHow To use: \n- Use A to rotate left and D to rotate right\n-
+    Use C to raise the hook and Z to lower the hook\n- Use S to move the hook towards
+    the player and W away from the player"
 --- !u!222 &1769176886
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57884,8 +57882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 1.2452}
-  m_SizeDelta: {x: 380.6747, y: 164.49}
+  m_AnchoredPosition: {x: -2, y: -35}
+  m_SizeDelta: {x: 380.6747, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085169219
 MonoBehaviour:
@@ -57924,7 +57922,8 @@ MonoBehaviour:
     it uses to move the lift up and down depends on the way it\u2019s powered. Hydraulics,
     diesel, and electricity are just a few ways scissor lifts can be powered. You\u2019ll
     commonly find scissor lifts used for a variety of tasks from performing building
-    repairs to reaching materials stored high in warehouses.\n\nTo use: Press..."
+    repairs to reaching materials stored high in warehouses.\n\nHow To use: \n- Press
+    C to raise\n- Press Z to lower\n- Press either Z or C again to halt the lift"
 --- !u!222 &2085169220
 CanvasRenderer:
   m_ObjectHideFlags: 0
