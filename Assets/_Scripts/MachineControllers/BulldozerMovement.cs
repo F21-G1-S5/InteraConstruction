@@ -23,11 +23,13 @@ public class BulldozerMovement : MonoBehaviour
     {
         if (CameraSwitching.playerInVehicle)
         {
+            // controls for moving the bulldozer
             var h = Input.GetAxisRaw("Horizontal");
             var v = Input.GetAxisRaw("Vertical");
             transform.Rotate(0, h * angularSpeed * Time.deltaTime, 0);
             transform.Translate(0, 0, v * speed * Time.deltaTime);
 
+            // controls for raising and lowering the bulldozer blade
             var raise = Input.GetAxis("Fire1");
             var lower = Input.GetAxis("Fire2");
             if (raise > 0)

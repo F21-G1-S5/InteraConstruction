@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraSwitching : MonoBehaviour
 {
     public GameObject camCrane;
+    public TowerCraneController craneController; // reference to controller, so we can turn it on or off
     public GameObject camBulldozer;
     public GameObject camScissorLift;
     public GameObject MainCamera;
@@ -21,6 +22,8 @@ public class CameraSwitching : MonoBehaviour
         {
             Debug.Log("pressing Crane Camera");
             camCrane.SetActive(true);
+            craneController.enabled = true;
+
             camBulldozer.SetActive(false);
             camScissorLift.SetActive(false);
             MainCamera.SetActive(false);
@@ -31,6 +34,8 @@ public class CameraSwitching : MonoBehaviour
             playerInVehicle = true;
             inBulldozer = true;
             camCrane.SetActive(false);
+            craneController.enabled = false;
+
             camBulldozer.SetActive(true);
             camScissorLift.SetActive(false);
             MainCamera.SetActive(false);
@@ -40,6 +45,8 @@ public class CameraSwitching : MonoBehaviour
             playerInVehicle = true;
             inScissorLift = true;
             camCrane.SetActive(false);
+            craneController.enabled = false;
+
             camBulldozer.SetActive(false);
             camScissorLift.SetActive(true);
             MainCamera.SetActive(false);
@@ -47,6 +54,8 @@ public class CameraSwitching : MonoBehaviour
         if (Input.GetButtonDown("MainCamera"))
         {
             camCrane.SetActive(false);
+            craneController.enabled = false;
+
             camBulldozer.SetActive(false);
             camScissorLift.SetActive(false);
             MainCamera.SetActive(true);

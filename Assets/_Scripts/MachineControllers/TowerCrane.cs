@@ -13,6 +13,7 @@ public class TowerCrane : MonoBehaviour
     [SerializeField] Transform hookBottom;
 
     public AudioSource CraneAudio;
+    private bool playAudio = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,20 +24,45 @@ public class TowerCrane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Rotate(4f * Time.deltaTime);
-        //MoveTruck(1f * Time.deltaTime);
-        //MoveHook(-1f * Time.deltaTime);
+
+    }
+
+    private void FixedUpdate()
+    {
+        // toggle playAudio on fixed update
+        if (playAudio)
+        {
+            playAudio = false;
+
+        }
+        else
+        {
+            // if we have not refreshed playAudio, stop the audio clip
+            CraneAudio.Stop();
+        }
     }
 
     public void Rotate(float angle)
     {
-        
+        // start playing audio if not already
+        if (!CraneAudio.isPlaying)
+        {
+            CraneAudio.Play();
+        }
+        playAudio = true;
+
         cabin.Rotate(new Vector3(0, 0, angle), Space.Self);
     }
 
     public void MoveTruck(float speed)
     {
-        CraneAudio.Play();
+        // start playing audio if not already
+        if (!CraneAudio.isPlaying)
+        {
+            CraneAudio.Play();
+        }
+        playAudio = true;
+
         carriage.Translate(new Vector3(speed, 0, 0), Space.Self);
         if (carriage.localPosition.x > carriageInner.localPosition.x)
         {
@@ -51,6 +77,13 @@ public class TowerCrane : MonoBehaviour
 
     public void MoveHook(float speed)
     {
+        // start playing audio if not already
+        if (!CraneAudio.isPlaying)
+        {
+            CraneAudio.Play();
+        }
+        playAudio = true;
+
         hook.Translate(new Vector3(0, 0, speed), Space.Self);
         if (hook.localPosition.z > hookTop.localPosition.z)
         {
