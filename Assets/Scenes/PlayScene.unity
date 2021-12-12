@@ -28740,7 +28740,7 @@ MonoBehaviour:
     it consists of a heavy, broad steel blade or plate mounted on the front of a
     tractor.\n\nHow To use: \n- Use W To drive forward and S to drive back\n- Use
     A to rotate left and D to rotate right\n- Use Right Click to raise blade and
-    Left Click to raise"
+    Left Click to raise\n- Use LEFT ARROW to exit the machine"
 --- !u!222 &1034400668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50301,7 +50301,7 @@ MonoBehaviour:
     The most common use of cranes is in the construction industry and heavy equipment
     manufacturing.\n\nHow To use: \n- Use A to rotate left and D to rotate right\n-
     Use C to raise the hook and Z to lower the hook\n- Use S to move the hook towards
-    the player and W away from the player"
+    the player and W away from the player\n- Press LEFT ARROW to exit the machine"
 --- !u!222 &1769176886
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58019,7 +58019,8 @@ MonoBehaviour:
     diesel, and electricity are just a few ways scissor lifts can be powered. You\u2019ll
     commonly find scissor lifts used for a variety of tasks from performing building
     repairs to reaching materials stored high in warehouses.\n\nHow To use: \n- Press
-    C to raise\n- Press Z to lower\n- Press either Z or C again to halt the lift"
+    C to raise\n- Press Z to lower\n- Press either Z or C again to halt the lift\n-
+    Press LEFT ARROW to exit the machine"
 --- !u!222 &2085169220
 CanvasRenderer:
   m_ObjectHideFlags: 0
