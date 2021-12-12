@@ -83,7 +83,7 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public void Up() // Start raising the lift
+	private void Up() // Start raising the lift
 	{
 		
 		anim.SetFloat("Direction", 1);
@@ -93,7 +93,7 @@ public class ScissorLift : MonoBehaviour
 		goDown = 2;
 	}
 
-	public void Down() // Start lowering the lift
+	private void Down() // Start lowering the lift
 	{
 		
 		anim.SetFloat("Direction", -1);
@@ -103,7 +103,7 @@ public class ScissorLift : MonoBehaviour
 		goUp = 2;
 	}
 
-	public void Pause() // Stop the lift where it is
+	private void Pause() // Stop the lift where it is
 	{
 		goUp = 0;
 		goDown = 0;
@@ -112,7 +112,7 @@ public class ScissorLift : MonoBehaviour
 		anim.speed = 0.0f;
 	}
 
-	public void topMax() // Stop if we reached the top
+	private void topMax() // Stop if we reached the top
 	{
 		switch (topped)
 		{
@@ -130,7 +130,7 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public void bottomMax() // Stop if we reached the bottom
+	private void bottomMax() // Stop if we reached the bottom
 	{
 		switch (bottomed)
 		{

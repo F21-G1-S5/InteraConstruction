@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class <c>TowerCraneController</c> responds to key inputs by moving the crane.
+/// Attach this MonoBehaviour as a component to an Object with a <c>TowerCrane</c> component to enable these controls.
+/// </summary>
 public class TowerCraneController : MonoBehaviour
 {
-
     [SerializeField] private TowerCrane crane;
     [SerializeField] private float rotateSpeed = 1f;
     [SerializeField] private float truckSpeed = 1f;
     [SerializeField] private float hookSpeed = 1f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

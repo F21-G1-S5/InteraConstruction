@@ -7,15 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ScissorLiftMovement : MonoBehaviour
 {
-    float speed = 5.0f;
-    float angularSpeed = 45.0f;
     [SerializeField] ScissorLift lift;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
 
     // Update is called once per frame
     /// <summary>
@@ -25,11 +17,11 @@ public class ScissorLiftMovement : MonoBehaviour
     {
         if (CameraSwitching.inScissorLift)
         {
-            if (Input.GetKey(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 lift.Lift();
             }
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 lift.Lower();
             }

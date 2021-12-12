@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// serializable data for the player.
-// use this class as the interface for sending and receiving data to/from the save system
+/// <summary>
+/// Class <c>PlayerData</c> is a serializable set of primitive data representing a player in the game.
+/// This data gets passed by the JSONSaveSystem, and can convert back to Vector3 and Quaternions.
+/// </summary>
 [System.Serializable]
 public class PlayerData
 {
@@ -29,12 +31,19 @@ public class PlayerData
         rotation[3] = go.transform.localRotation.w;
     }
 
-    // helpers for converting native c# objects to Unity objects
+    /// <summary>
+    /// method <c>GetPosition</c>
+    /// </summary>
+    /// <returns>Vector3 representing the object's position.</returns>
     public Vector3 GetPosition()
     {
         return new Vector3(position[0], position[1], position[2]);
     }
 
+    /// <summary>
+    /// method <c>GetRotation</c>
+    /// </summary>
+    /// <returns>Quaternion representing the object's rotation.</returns>
     public Quaternion GetRotation()
     {
         return new Quaternion(rotation[0], rotation[1], rotation[2], rotation[3]);

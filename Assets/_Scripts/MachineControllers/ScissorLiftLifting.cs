@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class <c>ScissozLiftLifting</c> handles movement of the scissorlift, and triggers audio clips for each animation.
+/// Use ScissorLiftMovement for updated controls over the animation controller.
+/// </summary>
 public class ScissorLiftLifting : MonoBehaviour{
     private float liftSpeed = 0.01f;
     private Transform platform;
@@ -13,9 +17,6 @@ public class ScissorLiftLifting : MonoBehaviour{
     private void Start() {
         platform=transform.Find("top").transform;
         animator=GetComponent<Animator>();
-    }
-
-    private void FixedUpdate() {
     }
 
     private void LiftUp() {

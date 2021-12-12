@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-// Saves and loads serializable PlayerData to a JSON file.
+/// <summary>
+/// Class <c>JSONSaveSystem</c> handles saving and loading a gameObject's data to a loval JSON file in a specified folder
+/// </summary>
 public static class JSONSaveSystem
 {
     private static string filePath = "Assets/Resources/Saves/";
 
-    // TODO: when someone creates the player controller, we need to change the parameter type from 'GameObject' to the more
-    //       specific player object.
+    /// <summary>
+    /// method <c>SavePlayer</c> saves GameObject p data in the form of a PlayerData object to a local JSON file
+    /// </summary>
+    /// <param name="p"> the GameObject to be saved</param>
+    /// <param name="filename"> the name of the file without file extensions</param>
     public static void SavePlayer(GameObject p, string filename)
     {
         // extract serializable player data
@@ -30,6 +35,11 @@ public static class JSONSaveSystem
         stream.Close();
     }
 
+    /// <summary>
+    /// method <c>LoadPlayer</c> attemps to create a PlayerData object from file stream located in the specified file
+    /// </summary>
+    /// <param name="filename">the name of the JSON file to read from, without a file extension</param>
+    /// <returns>Returns a PlayerData object from the saved file, or null if the file could not be opened.</returns>
     public static PlayerData LoadPlayer(string filename)
     {
         if (File.Exists(filePath + filename + ".json"))

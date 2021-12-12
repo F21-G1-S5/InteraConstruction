@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class <c>BulldozerMovement</c> controls a bulldozer object by responding to user inputs.
+/// Attach this MonoBehaviour as a component to an object to enable these controls.
+/// </summary>
 public class BulldozerMovement : MonoBehaviour
 {
     float speed = 5.0f;
     float angularSpeed = 45.0f;
-    [SerializeField] DozerBlade dozerBlade;
+    [SerializeField] DozerBlade dozerBlade; // the blade part of the bulldozer that can move up and down
     [SerializeField] float bladeSpeed = 0.4f;
 
     // Start is called before the first frame update
