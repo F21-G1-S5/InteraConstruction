@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerCraneHook : MonoBehaviour{
+/// <summary>
+/// <c>TowerCraneHook</c> is broken as of Release 1.0 and will be removed.
+/// Use <c>TowerCraneController</c> instead.
+/// </summary>
+public class TowerCraneHook : MonoBehaviour
+{
     private float hookSpeed=0.1f;
     private float hookLowerSpeed=0.1f;
     private float craneRotateSpeed=0.3f;
@@ -14,23 +19,6 @@ public class TowerCraneHook : MonoBehaviour{
         hookBase=transform.Find("towerCrane_cabine/point_0/point_cabine/point_truck").transform;
         hook=transform.Find("towerCrane_cabine/point_0/point_cabine/point_truck/point_hook").transform;
         craneBase=transform.Find("towerCrane_cabine/point_0/point_cabine").transform;
-    }
-
-    private void FixedUpdate() {
-        /*Tests
-        if (Input.GetKey(KeyCode.UpArrow))
-            MoveHookUp();
-        if (Input.GetKey(KeyCode.DownArrow))
-            MoveHookDown();
-        if(Input.GetKey(KeyCode.LeftArrow))
-            MoveHookForward();
-        if (Input.GetKey(KeyCode.RightArrow)) 
-            MoveHookBackward();
-        if(Input.GetKey(KeyCode.C))
-            RotateCraneCW();
-        if(Input.GetKey(KeyCode.V))
-            RotateCraneCCW();
-        */
     }
 
     private void RotateCraneCW() {

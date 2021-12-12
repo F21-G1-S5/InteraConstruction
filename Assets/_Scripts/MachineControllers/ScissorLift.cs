@@ -14,7 +14,7 @@ public class ScissorLift : MonoBehaviour
     private int topped;
     private int bottomed;
 
-
+	public AudioSource liftAudio;
 
 	[SerializeField][Range(0f, 1f)] float upperLimit = 1f;
 
@@ -83,9 +83,10 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public void Up() // Start raising the lift
+	private void Up() // Start raising the lift
 	{
-		
+		liftAudio.Play();
+
 		anim.SetFloat("Direction", 1);
 		anim.speed = 1.0f;
 		anim.Play("move", -1, float.NegativeInfinity);
@@ -93,9 +94,10 @@ public class ScissorLift : MonoBehaviour
 		goDown = 2;
 	}
 
-	public void Down() // Start lowering the lift
+	private void Down() // Start lowering the lift
 	{
-		
+		liftAudio.Play();
+
 		anim.SetFloat("Direction", -1);
 		anim.speed = 1.0f;
 		anim.Play("move", -1, float.NegativeInfinity);
@@ -103,8 +105,10 @@ public class ScissorLift : MonoBehaviour
 		goUp = 2;
 	}
 
-	public void Pause() // Stop the lift where it is
+	private void Pause() // Stop the lift where it is
 	{
+		liftAudio.Stop();
+
 		goUp = 0;
 		goDown = 0;
 		topped = 0;
@@ -112,8 +116,10 @@ public class ScissorLift : MonoBehaviour
 		anim.speed = 0.0f;
 	}
 
-	public void topMax() // Stop if we reached the top
+	private void topMax() // Stop if we reached the top
 	{
+		liftAudio.Stop();
+
 		switch (topped)
 		{
 			case 0:
@@ -130,8 +136,10 @@ public class ScissorLift : MonoBehaviour
 		}
 	}
 
-	public void bottomMax() // Stop if we reached the bottom
+	private void bottomMax() // Stop if we reached the bottom
 	{
+		liftAudio.Stop();
+
 		switch (bottomed)
 		{
 			case 0:

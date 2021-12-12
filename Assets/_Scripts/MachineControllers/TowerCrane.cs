@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class <c>TowerCrane</c> controls components of a tower crane model and provides method for easily maneuvering
+/// these components.
+/// </summary>
 public class TowerCrane : MonoBehaviour
 {
     [SerializeField] Transform cabin;
@@ -14,18 +18,6 @@ public class TowerCrane : MonoBehaviour
 
     public AudioSource CraneAudio;
     private bool playAudio = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void FixedUpdate()
     {
@@ -42,6 +34,10 @@ public class TowerCrane : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Rotate the crane by a given angle.
+    /// </summary>
+    /// <param name="angle"></param>
     public void Rotate(float angle)
     {
         // start playing audio if not already
@@ -54,6 +50,10 @@ public class TowerCrane : MonoBehaviour
         cabin.Rotate(new Vector3(0, 0, angle), Space.Self);
     }
 
+    /// <summary>
+    /// Translates the hook truck along the crane, within the given constraints.
+    /// </summary>
+    /// <param name="speed">the amount by which to move the truck</param>
     public void MoveTruck(float speed)
     {
         // start playing audio if not already
@@ -75,6 +75,10 @@ public class TowerCrane : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Move the crane hook vertically, within the given height constraints.
+    /// </summary>
+    /// <param name="speed">the amount by which to move the truck</param>
     public void MoveHook(float speed)
     {
         // start playing audio if not already
