@@ -1982,8 +1982,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craneTDScreen: {fileID: 1270603754}
-  PauseButton: {fileID: 1445744387}
   player: {fileID: 1648757461}
+  minimap0: {fileID: 1230330634}
+  minimap1: {fileID: 1194487210}
+  minimap2: {fileID: 41593003}
+  minimap3: {fileID: 258147458}
+  mainPauseButton0: {fileID: 172600194}
+  mainPauseButton1: {fileID: 1039757190}
+  mainPauseButton2: {fileID: 390805504}
+  mainPauseButton3: {fileID: 1445744387}
+  promptedTD: {fileID: 1427241496}
 --- !u!114 &52365235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,8 +2005,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buldozerTDScreen: {fileID: 1217067082}
-  PauseButton: {fileID: 1445744387}
   player: {fileID: 1648757461}
+  minimap0: {fileID: 1230330634}
+  minimap1: {fileID: 1194487210}
+  minimap2: {fileID: 41593003}
+  minimap3: {fileID: 258147458}
+  mainPauseButton0: {fileID: 172600194}
+  mainPauseButton1: {fileID: 1039757190}
+  mainPauseButton2: {fileID: 390805504}
+  mainPauseButton3: {fileID: 1445744387}
+  promptedTD: {fileID: 161152412}
 --- !u!114 &52365236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,8 +2028,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scissorLiftTDScreen: {fileID: 812751953}
-  PauseButton: {fileID: 1445744387}
   player: {fileID: 1648757461}
+  minimap0: {fileID: 1230330634}
+  minimap1: {fileID: 1194487210}
+  minimap2: {fileID: 41593003}
+  minimap3: {fileID: 258147458}
+  mainPauseButton0: {fileID: 172600194}
+  mainPauseButton1: {fileID: 1039757190}
+  mainPauseButton2: {fileID: 390805504}
+  mainPauseButton3: {fileID: 1445744387}
+  promptedTD: {fileID: 739705194}
 --- !u!1001 &52621857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3774,8 +3798,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52365234}
-        m_TargetAssemblyTypeName: TDcrane, Assembly-CSharp
+      - m_Target: {fileID: 52365235}
+        m_TargetAssemblyTypeName: TDbuldozer, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -20372,8 +20396,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52365234}
-        m_TargetAssemblyTypeName: TDcrane, Assembly-CSharp
+      - m_Target: {fileID: 52365236}
+        m_TargetAssemblyTypeName: TDscissorLift, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -58693,8 +58717,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.6526375, y: 6.406727, z: 10.644945}
-  m_Center: {x: -0.7096691, y: 2.7033634, z: 1.2177706}
+  m_Size: {x: 12.962967, y: 6.406727, z: 14.375448}
+  m_Center: {x: -0.69078445, y: 2.7033634, z: 1.6064024}
 --- !u!114 &2192361222080024382
 MonoBehaviour:
   m_ObjectHideFlags: 0

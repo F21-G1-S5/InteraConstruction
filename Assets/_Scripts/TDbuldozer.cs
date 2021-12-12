@@ -6,8 +6,17 @@ public class TDbuldozer : MonoBehaviour
 {
 
     public GameObject buldozerTDScreen;
-    public GameObject PauseButton;
+    //public GameObject PauseButton;
     public GameObject player;
+    public GameObject minimap0;
+    public GameObject minimap1;
+    public GameObject minimap2;
+    public GameObject minimap3;
+    public GameObject mainPauseButton0;
+    public GameObject mainPauseButton1;
+    public GameObject mainPauseButton2;
+    public GameObject mainPauseButton3;
+    public GameObject promptedTD;
 
 
     public static bool TDGamePaused;
@@ -35,12 +44,22 @@ public class TDbuldozer : MonoBehaviour
 
     public void PauseGame()
     {
-        Pause_Resume.GamePaused = true;
-        TDGamePaused = true;
+        minimap0.SetActive(false);
+        minimap1.SetActive(false);
+        minimap2.SetActive(false);
+        minimap3.SetActive(false);
+        mainPauseButton0.SetActive(false);
+        mainPauseButton1.SetActive(false);
+        mainPauseButton2.SetActive(false);
+        mainPauseButton3.SetActive(false);
+        promptedTD.SetActive(false);
+
 
         buldozerTDScreen.SetActive(true);
 
-        PauseButton.SetActive(false);
+        //PauseButton.SetActive(false);
+        Pause_Resume.GamePaused = true;
+        TDGamePaused = true;
 
     }
 
@@ -49,7 +68,15 @@ public class TDbuldozer : MonoBehaviour
         TDGamePaused = false;
         Pause_Resume.GamePaused = false;
         buldozerTDScreen.SetActive(false);
-        PauseButton.SetActive(true);
+        //PauseButton.SetActive(true);
+        minimap0.SetActive(true);
+        minimap1.SetActive(true);
+        minimap2.SetActive(true);
+        minimap3.SetActive(true);
+        mainPauseButton0.SetActive(true);
+        mainPauseButton1.SetActive(true);
+        mainPauseButton2.SetActive(true);
+        mainPauseButton3.SetActive(true);
     }
 
     public void SaveGame()
