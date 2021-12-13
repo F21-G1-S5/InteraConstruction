@@ -8,7 +8,7 @@ using System.IO;
 /// </summary>
 public static class JSONSaveSystem
 {
-    private static string filePath = "Assets/Resources/Saves/";
+    private static string filePath = Application.persistentDataPath;
 
     /// <summary>
     /// method <c>SavePlayer</c> saves GameObject p data in the form of a PlayerData object to a local JSON file

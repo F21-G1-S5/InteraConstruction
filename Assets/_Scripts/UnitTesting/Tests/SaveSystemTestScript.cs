@@ -7,7 +7,7 @@ using System.IO;
 
 public class SaveSystemTestScript
 {
-    private static string filePath = "Assets/Resources/Saves/";
+    private static string filePath = Application.persistentDataPath;
 
     // test the creation of a PlayerData object from a GameObject
     // expected outcome: position value should be saved to the first 3 indices of the PlayerData's position array
