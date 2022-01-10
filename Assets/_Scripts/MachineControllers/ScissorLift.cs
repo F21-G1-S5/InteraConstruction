@@ -54,11 +54,8 @@ public class ScissorLift : MonoBehaviour
 				Up();
 				break;
 
-			case 1:
-				Pause();
-				break;
-
 			default:
+				Pause();
 				break;
 		}
 	}
@@ -74,11 +71,8 @@ public class ScissorLift : MonoBehaviour
 				Down();
 				break;
 
-			case 1:
-				Pause();
-				break;
-
 			default:
+				Pause();
 				break;
 		}
 	}
