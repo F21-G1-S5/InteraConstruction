@@ -5,10 +5,13 @@ using UnityEngine;
 public class PromptTutDes : MonoBehaviour
 {
     public GameObject uiObject;
+    public TutorialManager tManager;
     // Start is called before the first frame update
     void Start()
     {
         uiObject.SetActive(false);
+
+        tManager = FindObjectOfType<TutorialManager>();
     }
 
     // Update is called once per frame
@@ -19,24 +22,32 @@ public class PromptTutDes : MonoBehaviour
 
     private void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.tag == "Player")
+        if (tManager != null)
         {
-            uiObject.SetActive(true);
-            //StartCoroutine("WaitForSec");
+            tManager.ShowTutorial(uiObject);
+        }
+        else
+        {
+            // support for old behavior without a tutorial manager
+            if (player.gameObject.tag == "Player")
+            {
+                uiObject.SetActive(true);
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (tManager != null)
         {
-            uiObject.SetActive(false);
+            tManager.HideTutorial(uiObject);
+        }
+        else
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                uiObject.SetActive(false);
+            }
         }
     }
-    //IEnumerator WaitForSec()
-    //{
-    //    yield return new WaitForSeconds(4);
-    //    uiObject.SetActive(false);
-    //    //Destroy(gameObject);
-    //}
 }
