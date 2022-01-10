@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class PromptTutDes : MonoBehaviour
 {
-    public GameObject uiObject;
+    public GameObject uiObject; // this gameobject should be the tutorial prompt that shows up at the bottom of the screen
     public TutorialManager tManager;
+
     // Start is called before the first frame update
     void Start()
     {
         uiObject.SetActive(false);
 
         tManager = FindObjectOfType<TutorialManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnTriggerEnter(Collider player)
