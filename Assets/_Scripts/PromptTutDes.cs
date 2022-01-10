@@ -22,13 +22,21 @@ public class PromptTutDes : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             uiObject.SetActive(true);
-            StartCoroutine("WaitForSec");
+            //StartCoroutine("WaitForSec");
         }
     }
-    IEnumerator WaitForSec()
+
+    private void OnTriggerExit(Collider other)
     {
-        yield return new WaitForSeconds(4);
-        uiObject.SetActive(false);
-        //Destroy(gameObject);
+        if (other.gameObject.tag == "Player")
+        {
+            uiObject.SetActive(false);
+        }
     }
+    //IEnumerator WaitForSec()
+    //{
+    //    yield return new WaitForSeconds(4);
+    //    uiObject.SetActive(false);
+    //    //Destroy(gameObject);
+    //}
 }
