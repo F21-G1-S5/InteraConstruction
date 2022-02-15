@@ -9,6 +9,8 @@ public class LightTowerInteraction : MonoBehaviour
 {
     private bool lightOn = false;
     public Material[] materials;
+    public GameObject light;
+
     Renderer renderer;
 
     void Start()
@@ -23,20 +25,24 @@ public class LightTowerInteraction : MonoBehaviour
     
     void Update()
     {
-        //if light is off then turn it on by changing material
+        //if light is off, then turn it on by changing material
         if (lightOn == false && Input.GetKeyDown(KeyCode.Alpha4))
         {
             // Set the new material on the GameObject
             renderer.sharedMaterial = materials[1];
-            Debug.Log("Light turned on");
+            // turn lightning for spotlight on
+            light.SetActive(true);
+
             lightOn = true;
 
-        } //if light is on then turn off on by changing material
+        } //if light is on, then turn off on by changing material
         else if(lightOn == true && Input.GetKeyDown(KeyCode.Alpha4))
         {
             // Set the new material on the GameObject
             renderer.sharedMaterial = materials[0];
-            Debug.Log("Light turned off");
+            // turn lightning for spotlight off
+            light.SetActive(false);
+
             lightOn = false;
         }
     }
