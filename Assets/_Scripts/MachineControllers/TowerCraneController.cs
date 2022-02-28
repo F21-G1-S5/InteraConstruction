@@ -9,6 +9,7 @@ using UnityEngine;
 public class TowerCraneController : MonoBehaviour
 {
     [SerializeField] private TowerCrane crane;
+    [SerializeField] private TowerCraneHookPickup craneHook;
     [SerializeField] private float rotateSpeed = 1f;
     [SerializeField] private float truckSpeed = 1f;
     [SerializeField] private float hookSpeed = 1f;
@@ -44,6 +45,14 @@ public class TowerCraneController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             crane.Rotate(rotateSpeed * Time.deltaTime);
+        }
+
+        // item pick up and drop
+        if (Input.GetKeyDown(KeyCode.G)) {
+            craneHook.PickUpItem();
+        }
+        if (Input.GetKeyDown(KeyCode.B)) {
+            craneHook.PutDownItem();
         }
     }
 }
