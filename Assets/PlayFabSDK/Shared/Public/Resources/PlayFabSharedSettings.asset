@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: 3C782
   DeveloperSecretKey: 44FKTYSCU35RJ1XMUXN9NFCDSGMGKF86C9PMJFN97646PECA8B
   ProductionEnvironmentUrl: 
-  RequestType: 2
+  RequestType: 0
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000
