@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menus/LoginScene.unity
     guid: 7ddd35f2aec75b243862c591ab10012f
   - enabled: 1
     path: Assets/Scenes/Menus/MainMenu.unity
     guid: b9ee610607c80cf4d927bf45cb335743
+  - enabled: 1
+    path: Assets/Scenes/Menus/HostServer.unity
+    guid: 8a100fd256d2e93448fadea75e741d17
+  - enabled: 1
+    path: Assets/Scenes/Menus/JoinServer.unity
+    guid: 79b15638ed6b1d849801cd5c1d37b90d
   - enabled: 1
     path: Assets/Scenes/Menus/LoadScene.unity
     guid: 3576618eaa982d94393c46439a191823
@@ -23,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
     guid: 4d26cc515fe107549948dc041ea1885f
+  - enabled: 1
+    path: Assets/Scenes/MultiPlayerScene.unity
+    guid: 1f9bbe85229aed145a5c5ae173779a68
   m_configObjects: {}

@@ -12,7 +12,7 @@ public class QualitySelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dropdown.value = QualitySettings.GetQualityLevel();
+        //dropdown.value = QualitySettings.GetQualityLevel();
     }
 
     public void ChangeLevel(int value)
