@@ -6,13 +6,18 @@ using UnityEngine;
 /// Class <c>TowerCraneController</c> responds to key inputs by moving the crane.
 /// Attach this MonoBehaviour as a component to an Object with a <c>TowerCrane</c> component to enable these controls.
 /// </summary>
-public class TowerCraneController : MonoBehaviour
+public class TowerCraneController : MonoBehaviour, InteractiveMachine
 {
     [SerializeField] private TowerCrane crane;
     [SerializeField] private TowerCraneHookPickup craneHook;
     [SerializeField] private float rotateSpeed = 1f;
     [SerializeField] private float truckSpeed = 1f;
     [SerializeField] private float hookSpeed = 1f;
+
+    [SerializeField] private Transform operatingPosition;
+    [SerializeField] private Transform dismountPosition;
+
+    private GameObject operatingPlayer;
 
     // Update is called once per frame
     void Update()
@@ -54,5 +59,33 @@ public class TowerCraneController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B)) {
             craneHook.PutDownItem();
         }
+    }
+
+    public InteractiveMachine StartInteraction(GameObject player)
+    {
+        if (operatingPlayer)
+        {
+            return null;
+        }
+        operatingPlayer = player;
+        player.transform.position = operatingPosition.position;
+        player.transform.rotation = operatingPosition.rotation;
+        player.transform.parent = operatingPosition;
+
+        return this;
+    }
+
+    public void EndInteraction(GameObject player)
+    {
+        operatingPlayer = null;
+        player.transform.parent = null;
+        player.transform.position = dismountPosition.position;
+        player.transform.rotation = dismountPosition.rotation;
+    }
+
+    public void Operate()
+    {
+        // while this is a monobehaviour, we're leveraging the Monobehaviour.Update() method
+        Update();
     }
 }
