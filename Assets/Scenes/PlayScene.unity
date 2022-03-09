@@ -1497,6 +1497,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4558070733231408, guid: a9da80f587bbf9046aefc4a4cfb8a7fc, type: 3}
   m_PrefabInstance: {fileID: 43897538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &44021450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44021451}
+  m_Layer: 0
+  m_Name: DismountPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44021451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44021450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1437, y: -0.0833, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 270749044}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &44643358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3759,6 +3789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lighttower
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveMachine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
 --- !u!1 &139477587
@@ -5127,6 +5161,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7103493238137269915, guid: 7e5e717df5b3ab6408572955a6ba0774, type: 3}
   m_PrefabInstance: {fileID: 183026427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &183208716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183208717}
+  m_Layer: 0
+  m_Name: OperatingSeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183208717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183208716}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.47, y: -0, z: 2.118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1865548137}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!1 &186380225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6774,6 +6838,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 492910, guid: 380c131da968d424ab4902f967bc23d5, type: 3}
   m_PrefabInstance: {fileID: 234215320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &235898093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235898094}
+  m_Layer: 0
+  m_Name: DrivingSeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235898094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235898093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0113, y: -0.0286, z: -0.0317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 270749044}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &240162634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8253,6 +8347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dozerBlade: {fileID: 270749043}
   bladeSpeed: 0.25
+  operatingPosition: {fileID: 235898094}
+  dismountPosition: {fileID: 44021451}
 --- !u!1001 &272505757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43579,6 +43675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1526020983}
+  operatingPosition: {fileID: 1254543349}
+  dismountPosition: {fileID: 1558180196}
 --- !u!65 &1526020989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44069,6 +44167,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 458460, guid: b39d34f9ee12e3d4f8a61720146b7939, type: 3}
   m_PrefabInstance: {fileID: 1556192723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1558180195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558180196}
+  m_Layer: 0
+  m_Name: DismountPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558180196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558180195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.05, y: 1.177, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 455806612}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1559665845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51071,6 +51199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lighttower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveMachine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
 --- !u!1 &1826176182 stripped
@@ -51626,6 +51758,36 @@ Transform:
   - {fileID: 1361305681}
   m_Father: {fileID: 0}
   m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1842570787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842570788}
+  m_Layer: 0
+  m_Name: DismountPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1842570788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842570787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.8, z: -5.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2192361222080024381}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1842818051
 GameObject:
@@ -53542,6 +53704,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
       propertyPath: m_Name
       value: lighttower (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveMachine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5bdd3c37bb99ac47b906231ee45406d, type: 3}
@@ -59197,6 +59363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scissor_lift_1
       objectReference: {fileID: 0}
+    - target: {fileID: 723263947405434376, guid: 656e5cfd856beab4d967c4388a07eda0, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveMachine
+      objectReference: {fileID: 0}
     - target: {fileID: 723263947405434377, guid: 656e5cfd856beab4d967c4388a07eda0, type: 3}
       propertyPath: liftAudio
       value: 
@@ -59306,6 +59476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerCrane_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2191723697642524749, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveMachine
+      objectReference: {fileID: 0}
     - target: {fileID: 2191723697642524750, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
       propertyPath: CraneAudio
       value: 
@@ -59359,6 +59533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ec7e10d717bda41aea32df5e6c7d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2192361222080024381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2189521948033723835, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+  m_PrefabInstance: {fileID: 2192361222080024376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2192361222080024382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59388,6 +59567,8 @@ MonoBehaviour:
   rotateSpeed: 10
   truckSpeed: 1
   hookSpeed: 5
+  operatingPosition: {fileID: 183208717}
+  dismountPosition: {fileID: 1842570788}
 --- !u!1001 &4098203729838515415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59446,6 +59627,10 @@ PrefabInstance:
     - target: {fileID: 680933818240077872, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680933818240077872, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveMachine
       objectReference: {fileID: 0}
     - target: {fileID: 680933818240077887, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
       propertyPath: LiftAudio

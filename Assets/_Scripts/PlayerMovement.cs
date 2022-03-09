@@ -11,29 +11,35 @@ public class PlayerMovement : MonoBehaviour{
     private readonly float gravity = Physics.gravity.y;
     public Transform scissorLift;
     public Transform bulldozer;
+
+    InteractiveMachine operatingMachine;
+
     private void Start() {
         cc = GetComponent<CharacterController>();
     }
     private void Update() {
-        MovePlayer();
-        if (CameraSwitching.playerInVehicle)
+
+        if (operatingMachine != null)
         {
-            cc.enabled = false;
-            if(CameraSwitching.inScissorLift)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                transform.position = scissorLift.position;
-                
-                transform.rotation = scissorLift.rotation;
+                // return to normal player controls
+                operatingMachine.EndInteraction(gameObject);
+                operatingMachine = null;
+                cc.enabled = true;
             }
-            if (CameraSwitching.inBulldozer)
+            else
             {
-                transform.position = bulldozer.position;
-                transform.rotation = bulldozer.rotation;
+                operatingMachine.Operate();
             }
         }
         else
         {
-            cc.enabled = true;
+            MovePlayer();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                InteractWithMachine();
+            }
         }
     }
     private void MovePlayer() {
@@ -44,5 +50,30 @@ public class PlayerMovement : MonoBehaviour{
             yVel += -(gravityMultiplier);
         move.y = yVel;
         cc.Move(move);
+    }
+
+    /// <summary>
+    /// Looks for Interactive Machines, and calls StartInteraction on the first one found.
+    /// Sets the operatingMachine reference if one is returned
+    /// </summary>
+    private void InteractWithMachine()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f);
+        foreach (var collider in hitColliders)
+        {
+            if (collider.CompareTag("InteractiveMachine"))
+            {
+                InteractiveMachine machine = collider.gameObject.GetComponent<InteractiveMachine>();
+                if (machine != null)
+                {
+                    operatingMachine = machine.StartInteraction(gameObject);
+                    if (operatingMachine != null)
+                    {
+                        cc.enabled = false;
+                    }
+                }
+                return;
+            }
+        }
     }
 }
