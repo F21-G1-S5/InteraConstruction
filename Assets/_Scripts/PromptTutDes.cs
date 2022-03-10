@@ -12,7 +12,10 @@ public class PromptTutDes : MonoBehaviour
     {
         uiObject.SetActive(false);
 
-        tManager = FindObjectOfType<TutorialManager>();
+        if (tManager == null)
+        {
+            tManager = FindObjectOfType<TutorialManager>();
+        }
     }
 
     private void OnTriggerEnter(Collider player)
