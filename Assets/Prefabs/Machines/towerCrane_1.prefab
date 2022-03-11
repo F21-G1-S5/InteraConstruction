@@ -1249,6 +1249,7 @@ GameObject:
   - component: {fileID: 2189521948033723835}
   - component: {fileID: 2191723697642524750}
   - component: {fileID: 2192361222080024379}
+  - component: {fileID: 7553139452442326153}
   - component: {fileID: 2192361222080024378}
   - component: {fileID: 2192361222080024383}
   m_Layer: 0
@@ -1266,7 +1267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2191723697642524749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.806555, y: 0.29901013, z: 14.767903}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 2197107537314094947}
@@ -1308,6 +1309,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18, y: 6.406727, z: 18}
   m_Center: {x: 0, y: 2.7033634, z: 0}
+--- !u!65 &7553139452442326153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191723697642524749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9, y: 4, z: 9}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &2192361222080024378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,6 +1355,8 @@ MonoBehaviour:
   hookSpeed: 5
   operatingPosition: {fileID: 183208717}
   dismountPosition: {fileID: 1842570788}
+  activator: 0
+  target: {fileID: 0}
 --- !u!1 &2191755654442138667
 GameObject:
   m_ObjectHideFlags: 0

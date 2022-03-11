@@ -54,6 +54,11 @@ public class TutorialManager : MonoBehaviour
     /// <param name="ui"></param>
     public void HideTutorial(GameObject ui)
     {
+        PromptKeyListener prompt = ui.GetComponent<PromptKeyListener>();
+        if (prompt)
+        {
+            prompt.TriggerHideTutorial();
+        }
         ui.SetActive(false);
 
         for (int i = 0; i <= head; i++)

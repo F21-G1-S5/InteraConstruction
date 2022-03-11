@@ -10,13 +10,11 @@ public class TutorialPrompt : MonoBehaviour
 {
     public GameObject tutorialScreen;
     public GameObject minimap;
-    public GameObject pauseButton;
     public GameObject prompt;
 
     public void ShowTutorial()
     {
         minimap.SetActive(false);
-        pauseButton.SetActive(false);
         prompt.SetActive(false);
 
         tutorialScreen.SetActive(true);
@@ -27,7 +25,7 @@ public class TutorialPrompt : MonoBehaviour
     public void HideTutorial()
     {
         minimap.SetActive(true);
-        pauseButton.SetActive(true);
+        prompt.SetActive(true);
 
         tutorialScreen.SetActive(false);
 

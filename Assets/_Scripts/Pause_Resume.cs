@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause_Resume : MonoBehaviour
 {
@@ -93,5 +94,11 @@ public class Pause_Resume : MonoBehaviour
         {
             cc.enabled = true;
         }
+    }
+
+    public void LOAD_SCENE(string SceneName)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneName);
     }
 }
