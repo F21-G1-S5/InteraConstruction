@@ -10,6 +10,8 @@ public class LightTowerInteraction : MonoBehaviour, InteractiveMachine
     private bool lightOn = false;
     public Material[] materials;
     public GameObject light;
+    public KeyCode activator;
+    public GameObject target;
 
     Renderer renderer;
 
@@ -18,8 +20,7 @@ public class LightTowerInteraction : MonoBehaviour, InteractiveMachine
 
         renderer = GetComponent<Renderer>();
         renderer.enabled = true;
-        renderer.sharedMaterial = materials[0];
-
+        renderer.sharedMaterial = materials[0]; //initiate start up default material
     }
 
     

@@ -16,6 +16,9 @@ public class BulldozerMovement : MonoBehaviour, InteractiveMachine
     [SerializeField] private Transform operatingPosition;
     [SerializeField] private Transform dismountPosition;
 
+    public KeyCode activator;
+    public GameObject target;
+
     private GameObject operatingPlayer;
 
     // Start is called before the first frame update
@@ -106,4 +109,5 @@ public class BulldozerMovement : MonoBehaviour, InteractiveMachine
             dozerBlade.StopLiftAudio();
         }
     }
+
 }

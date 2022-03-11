@@ -17,6 +17,9 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
     [SerializeField] private Transform operatingPosition;
     [SerializeField] private Transform dismountPosition;
 
+    public KeyCode activator;
+    public GameObject target;
+
     private GameObject operatingPlayer;
 
     // Update is called once per frame

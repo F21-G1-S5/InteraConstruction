@@ -11,8 +11,13 @@ public class PlayerMovement : MonoBehaviour{
     private readonly float gravity = Physics.gravity.y;
     public Transform scissorLift;
     public Transform bulldozer;
+    public GameObject targetForTutorial;
 
     InteractiveMachine operatingMachine;
+
+    //Pase Menu Variables
+    //public GameObject targetMenu;
+    //public bool isPauseMenuActive;
 
     private void Start() {
         cc = GetComponent<CharacterController>();
@@ -21,6 +26,7 @@ public class PlayerMovement : MonoBehaviour{
 
         if (operatingMachine != null)
         {
+            //operatingMachine.ActivateTutorial()
             if (Input.GetKeyDown(KeyCode.E))
             {
                 // return to normal player controls
@@ -76,4 +82,6 @@ public class PlayerMovement : MonoBehaviour{
             }
         }
     }
+
+
 }

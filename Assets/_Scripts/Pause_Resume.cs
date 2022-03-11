@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Pause_Resume : MonoBehaviour
 {
-    public GameObject PauseScreen;
-    public GameObject PauseButton;
     public GameObject player;
 
-    
-    public static bool GamePaused;
+    public GameObject targetMenu;
+    public static bool gamePaused = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        GamePaused = false;
-
+        Cursor.visible = false;
         GameObject go = GameObject.Find("TriggerLoadOnStart");
 
         if (go != null)
@@ -28,33 +26,41 @@ public class Pause_Resume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(GamePaused)
-        {
-            Time.timeScale = 0;
-            //Cursor.visible = true;
-        }
-        else
-        {
-            Time.timeScale = 1;
-            //Cursor.visible = false;
-        }
+        ActivatePauseMenu();
     }
 
-    public void PauseGame()
+    //Handle pause and resume for ESC key
+    private void ActivatePauseMenu()
     {
-        GamePaused = true;
-
-        PauseScreen.SetActive(true);
-
-        PauseButton.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(gamePaused)
+            {
+                targetMenu.SetActive(false);
+                Time.timeScale = 1.0f;
+                Cursor.visible = false;
+                gamePaused = false;
+                Debug.Log("Pause menu inactive");
+            }
+            else
+            {
+                targetMenu.SetActive(true);
+                Cursor.visible = true;
+                Time.timeScale = 0.0f;
+                gamePaused = true;
+                Debug.Log("Pause menu active");
+            }
+        }
 
     }
 
+    //Handle resume game for UI button
     public void ResumeGame()
     {
-        GamePaused = false;
-        PauseScreen.SetActive(false);
-        PauseButton.SetActive(true);
+        targetMenu.SetActive(false);
+        Time.timeScale = 1.0f;
+        Cursor.visible = false;
+        gamePaused = false;
     }
 
     public void SaveGame()

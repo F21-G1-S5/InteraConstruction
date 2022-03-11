@@ -21,7 +21,7 @@ public class TutorialPrompt : MonoBehaviour
 
         tutorialScreen.SetActive(true);
 
-        Pause_Resume.GamePaused = true;
+        Pause_Resume.gamePaused = true;
     }
 
     public void HideTutorial()
@@ -31,6 +31,6 @@ public class TutorialPrompt : MonoBehaviour
 
         tutorialScreen.SetActive(false);
 
-        Pause_Resume.GamePaused = false;
+        Pause_Resume.gamePaused = false;
     }
 }
