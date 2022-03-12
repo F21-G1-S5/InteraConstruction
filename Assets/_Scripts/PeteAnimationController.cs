@@ -13,12 +13,15 @@ public class PeteAnimationController : MonoBehaviour
     public bool listenForInputs = false;
     [SerializeField] private bool isSitting = false;
 
-    Animator anim;
+    [SerializeField] private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
 
         anim.SetBool("Sitting", isSitting);
     }

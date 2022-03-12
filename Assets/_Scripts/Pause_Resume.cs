@@ -8,8 +8,8 @@ public class Pause_Resume : MonoBehaviour
     public GameObject player;
 
     public GameObject targetMenu;
+    public bool isGamePausable = true;
     public static bool gamePaused = false;
-
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class Pause_Resume : MonoBehaviour
             {
                 targetMenu.SetActive(true);
                 Cursor.visible = true;
-                Time.timeScale = 0.0f;
+                if (isGamePausable) Time.timeScale = 0.0f;
                 gamePaused = true;
                 Debug.Log("Pause menu active");
             }
