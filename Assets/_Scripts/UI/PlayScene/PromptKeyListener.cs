@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PromptKeyListener : MonoBehaviour
 {
     [SerializeField] private TutorialPrompt tutorial;
-    public bool isTutorialActive = false;
+
+    [SerializeField] private KeyCode key;
+    [SerializeField] private UnityEvent onKeyPressed;
 
     private void Start()
     {
@@ -18,16 +21,9 @@ public class PromptKeyListener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(key))
         {
-            if (isTutorialActive)
-            {
-                tutorial.HideTutorial();
-            }
-            else
-            {
-                tutorial.ShowTutorial();
-            }
+            onKeyPressed.Invoke();
         }
     }
 
