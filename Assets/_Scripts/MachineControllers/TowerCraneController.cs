@@ -75,6 +75,12 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
         player.transform.rotation = operatingPosition.rotation;
         player.transform.parent = operatingPosition;
 
+        PlayerMovement pc = player.GetComponent<PlayerMovement>();
+        if (pc)
+        {
+            pc.SetPlayerSitting();
+        }
+
         return this;
     }
 

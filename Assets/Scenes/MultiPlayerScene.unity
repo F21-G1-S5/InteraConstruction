@@ -702,7 +702,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &17642346
 PrefabInstance:
@@ -1873,9 +1873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0ef76355611d40bd4847b871ef726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseScreen: {fileID: 978742451}
-  PauseButton: {fileID: 1445744387}
   player: {fileID: 0}
+  targetMenu: {fileID: 978742451}
+  isGamePausable: 0
 --- !u!114 &52365230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,7 +1953,7 @@ RectTransform:
   - {fileID: 258147459}
   - {fileID: 978742452}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3118,7 +3118,7 @@ Transform:
   - {fileID: 674574178}
   - {fileID: 1280480716}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &111583373
 PrefabInstance:
@@ -3797,7 +3797,7 @@ Transform:
   - {fileID: 1913191453}
   - {fileID: 1826176183}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &140537714
 PrefabInstance:
@@ -4487,6 +4487,7 @@ GameObject:
   - component: {fileID: 161152413}
   - component: {fileID: 161152415}
   - component: {fileID: 161152414}
+  - component: {fileID: 161152416}
   m_Layer: 5
   m_Name: TDPromptBulldozer
   m_TagString: Untagged
@@ -4560,6 +4561,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161152412}
   m_CullTransparentMesh: 1
+--- !u!114 &161152416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161152412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 2043350905}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2043350905}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &166360708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4999,49 +5029,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7103493238137269915, guid: 7e5e717df5b3ab6408572955a6ba0774, type: 3}
   m_PrefabInstance: {fileID: 183026427}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &186380225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 186380227}
-  - component: {fileID: 186380226}
-  m_Layer: 0
-  m_Name: BackToMainMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &186380226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186380225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be970a41d0ed254fb534d833501a6ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &186380227
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186380225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.58968, y: -34.162968, z: 24.066757}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &187603651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4558070733231408, guid: a9da80f587bbf9046aefc4a4cfb8a7fc, type: 3}
@@ -19303,6 +19290,7 @@ GameObject:
   - component: {fileID: 739705195}
   - component: {fileID: 739705197}
   - component: {fileID: 739705196}
+  - component: {fileID: 739705198}
   m_Layer: 5
   m_Name: TDPromptScissorLift
   m_TagString: Untagged
@@ -19376,6 +19364,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739705194}
   m_CullTransparentMesh: 1
+--- !u!114 &739705198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739705194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 1224417015}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1224417015}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &747372486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21385,6 +21402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 812751954}
+  - component: {fileID: 812751955}
   m_Layer: 5
   m_Name: TDscissorLiftScreen
   m_TagString: Untagged
@@ -21415,6 +21433,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -780, y: -318}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &812751955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812751953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 1224417015}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1224417015}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: HideTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &815774184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23368,7 +23415,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &886926907
 BoxCollider:
@@ -23869,7 +23916,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &911554834
 PrefabInstance:
@@ -31458,7 +31505,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialScreen: {fileID: 1391651848}
   minimap: {fileID: 258147458}
-  pauseButton: {fileID: 1445744387}
   prompt: {fileID: 1690339528}
 --- !u!114 &1201417423
 MonoBehaviour:
@@ -31535,7 +31581,7 @@ RectTransform:
   - {fileID: 1690339531}
   - {fileID: 1391651849}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -31913,6 +31959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1217067083}
+  - component: {fileID: 1217067084}
   m_Layer: 5
   m_Name: TDbuldozerScreen
   m_TagString: Untagged
@@ -31943,6 +31990,35 @@ RectTransform:
   m_AnchoredPosition: {x: 5.420471, y: 3.8356934}
   m_SizeDelta: {x: -541.4949, y: -184.74}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1217067084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217067082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 2043350905}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2043350905}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: HideTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1217331520
 GameObject:
   m_ObjectHideFlags: 0
@@ -31989,7 +32065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1220876441
 PrefabInstance:
@@ -32149,7 +32225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialScreen: {fileID: 812751953}
   minimap: {fileID: 258147458}
-  pauseButton: {fileID: 1445744387}
   prompt: {fileID: 739705194}
 --- !u!114 &1224417016
 MonoBehaviour:
@@ -32226,7 +32301,7 @@ RectTransform:
   - {fileID: 739705195}
   - {fileID: 812751954}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -33494,6 +33569,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 5f68591c3277fd5429c4bfec859f5ce6, type: 2}
   - {fileID: 2100000, guid: c6460547a451947489813d2c14defd6e, type: 2}
   light: {fileID: 74251864}
+  activator: 0
+  target: {fileID: 0}
 --- !u!1001 &1265293196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33632,6 +33709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1270603755}
+  - component: {fileID: 1270603756}
   m_Layer: 5
   m_Name: TDcraneScreen
   m_TagString: Untagged
@@ -33662,6 +33740,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -780, y: -318}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1270603756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270603754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 2067655583}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2067655583}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: HideTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1271067234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4558070733231408, guid: a9da80f587bbf9046aefc4a4cfb8a7fc, type: 3}
@@ -35503,7 +35610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1324833154
 PrefabInstance:
@@ -35944,7 +36051,7 @@ Transform:
   - {fileID: 444299482}
   - {fileID: 449194377}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1332323060
 PrefabInstance:
@@ -37656,6 +37763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1391651849}
+  - component: {fileID: 1391651850}
   m_Layer: 5
   m_Name: TDlightTowerScreen
   m_TagString: Untagged
@@ -37686,6 +37794,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -780, y: -318}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1391651850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391651848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 1201417422}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1201417422}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: HideTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1391940342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38890,6 +39027,7 @@ GameObject:
   - component: {fileID: 1427241497}
   - component: {fileID: 1427241499}
   - component: {fileID: 1427241498}
+  - component: {fileID: 1427241500}
   m_Layer: 5
   m_Name: TDPromptCrane
   m_TagString: Untagged
@@ -38963,6 +39101,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427241496}
   m_CullTransparentMesh: 1
+--- !u!114 &1427241500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427241496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 2067655583}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2067655583}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1429730697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46721,6 +46888,7 @@ GameObject:
   - component: {fileID: 1690339531}
   - component: {fileID: 1690339530}
   - component: {fileID: 1690339529}
+  - component: {fileID: 1690339532}
   m_Layer: 5
   m_Name: TDPromptLightTower
   m_TagString: Untagged
@@ -46794,6 +46962,35 @@ RectTransform:
   m_AnchoredPosition: {x: 273, y: 107}
   m_SizeDelta: {x: 256.9807, y: 94.4075}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1690339532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690339528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb3e1d42322f024198246ec9ac6464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 1201417422}
+  key: 116
+  onKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1201417422}
+        m_TargetAssemblyTypeName: TutorialPrompt, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1692121850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47491,7 +47688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1714387765
 PrefabInstance:
@@ -49497,7 +49694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1808971574
 PrefabInstance:
@@ -50028,6 +50225,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 5f68591c3277fd5429c4bfec859f5ce6, type: 2}
   - {fileID: 2100000, guid: c6460547a451947489813d2c14defd6e, type: 2}
   light: {fileID: 1317322803}
+  activator: 0
+  target: {fileID: 0}
 --- !u!114 &1826176185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50554,7 +50753,7 @@ Transform:
   - {fileID: 1985426786}
   - {fileID: 1361305681}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1842818051
 GameObject:
@@ -52499,6 +52698,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 5f68591c3277fd5429c4bfec859f5ce6, type: 2}
   - {fileID: 2100000, guid: c6460547a451947489813d2c14defd6e, type: 2}
   light: {fileID: 638280967}
+  activator: 0
+  target: {fileID: 0}
 --- !u!114 &1913191455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55167,7 +55368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialScreen: {fileID: 1217067082}
   minimap: {fileID: 258147458}
-  pauseButton: {fileID: 1445744387}
   prompt: {fileID: 161152412}
 --- !u!114 &2043350906
 MonoBehaviour:
@@ -55244,7 +55444,7 @@ RectTransform:
   - {fileID: 161152413}
   - {fileID: 1217067083}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -55825,7 +56025,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialScreen: {fileID: 1270603754}
   minimap: {fileID: 258147458}
-  pauseButton: {fileID: 1445744387}
   prompt: {fileID: 1427241496}
 --- !u!114 &2067655584
 MonoBehaviour:
@@ -55902,7 +56101,7 @@ RectTransform:
   - {fileID: 1427241497}
   - {fileID: 1270603755}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -57511,6 +57710,141 @@ PrefabInstance:
       objectReference: {fileID: 2067655582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+--- !u!1 &2192361222080024377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2191421519769606263, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+  m_PrefabInstance: {fileID: 2192361222080024376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2192361222080024378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2191608355022574033, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+  m_PrefabInstance: {fileID: 2192361222080024376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2192361222080024379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2191658885554359017, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+  m_PrefabInstance: {fileID: 2192361222080024376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2192361222080024380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &2192361222080024381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &2192361222080024382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &2192361222080024383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 2192361222080024380}
+  sceneViewId: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2192361222080024384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 2192361222080024381}
+  - {fileID: 2192361222080024380}
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2192361222080024385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192361222080024379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 2192361222080024382}
+  - {fileID: 2192361222080024381}
+  - {fileID: 2192361222080024380}
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &4098203729838515415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57576,3 +57910,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+--- !u!1 &4098203729838515416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 680933818240077872, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+  m_PrefabInstance: {fileID: 4098203729838515415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4098203729838515417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098203729838515416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &4098203729838515418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098203729838515416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 4098203729838515417}
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

@@ -22,7 +22,21 @@ public class PromptTutDes : MonoBehaviour
     {
         if (tManager != null)
         {
-            tManager.ShowTutorial(uiObject);
+            if (player.gameObject.tag == "Player")
+            {
+                PlayerMovement pc = player.gameObject.GetComponent<PlayerMovement>();
+                if (pc)
+                {
+                    // show/hide tutorial if the local player is the one triggering it
+                    if (pc.isLocalPlayer())
+                    {
+                        tManager.ShowTutorial(uiObject);
+                    }
+                    return;
+                }
+                // default behaviour if no PlayerMovement found
+                tManager.ShowTutorial(uiObject);
+            }
         }
         else
         {
@@ -38,7 +52,21 @@ public class PromptTutDes : MonoBehaviour
     {
         if (tManager != null)
         {
-            tManager.HideTutorial(uiObject);
+            if (other.gameObject.tag == "Player")
+            {
+                PlayerMovement pc = other.gameObject.GetComponent<PlayerMovement>();
+                if (pc)
+                {
+                    // show/hide tutorial if the local player is the one triggering it
+                    if (pc.isLocalPlayer())
+                    {
+                        tManager.HideTutorial(uiObject);
+                    }
+                    return;
+                }
+                // default behaviour if no PlayerMovement found
+                tManager.HideTutorial(uiObject);
+            }
         }
         else
         {

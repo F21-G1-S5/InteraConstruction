@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour{
-    private float speed = 0.05f;
+    private float speed = 0.03f;
     private float gravityMultiplier = 0.007f;
     private float yVel = 0f;
     private CharacterController cc;
     private readonly float gravity = Physics.gravity.y;
-    public Transform scissorLift;
-    public Transform bulldozer;
-    public GameObject targetForTutorial;
+    public PeteAnimationController anim;
+    
+    [SerializeField] private bool singlePlayerMode = false;
+    [SerializeField] private PhotonView photonView;
+    [SerializeField] private GameObject playerCam;
 
     InteractiveMachine operatingMachine;
 
@@ -21,30 +24,44 @@ public class PlayerMovement : MonoBehaviour{
 
     private void Start() {
         cc = GetComponent<CharacterController>();
-    }
-    private void Update() {
 
-        if (operatingMachine != null)
+        if (!singlePlayerMode)
         {
-            //operatingMachine.ActivateTutorial()
-            if (Input.GetKeyDown(KeyCode.E))
+            // remove camera if not the local player object
+            if (!photonView.IsMine)
             {
-                // return to normal player controls
-                operatingMachine.EndInteraction(gameObject);
-                operatingMachine = null;
-                cc.enabled = true;
+                playerCam.SetActive(false);
+            }
+        }
+    }
+    private void Update()
+    {
+        if (singlePlayerMode || photonView.IsMine)
+        {
+            if (operatingMachine != null)
+            {
+                //operatingMachine.ActivateTutorial()
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    // return to normal player controls
+                    operatingMachine.EndInteraction(gameObject);
+                    operatingMachine = null;
+                    cc.enabled = true;
+
+                    anim.Idle();
+                }
+                else
+                {
+                    operatingMachine.Operate();
+                }
             }
             else
             {
-                operatingMachine.Operate();
-            }
-        }
-        else
-        {
-            MovePlayer();
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                InteractWithMachine();
+                MovePlayer();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    InteractWithMachine();
+                }
             }
         }
     }
@@ -56,6 +73,15 @@ public class PlayerMovement : MonoBehaviour{
             yVel += -(gravityMultiplier);
         move.y = yVel;
         cc.Move(move);
+
+        if (move.z != 0)
+        {
+            anim.Walking();
+        }
+        else
+        {
+            anim.Idle();
+        }
     }
 
     /// <summary>
@@ -83,5 +109,17 @@ public class PlayerMovement : MonoBehaviour{
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns>True if the Player object belongs to the local user</returns>
+    public bool isLocalPlayer()
+    {
+        return (singlePlayerMode || photonView.IsMine);
+    }
 
+    public void SetPlayerSitting()
+    {
+        anim.Sitting();
+    }
 }
