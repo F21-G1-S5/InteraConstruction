@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 /// <summary>
 /// Class <c>BulldozerMovement</c> controls a bulldozer object by responding to user inputs.
 /// Attach this MonoBehaviour as a component to an object to enable these controls.
 /// </summary>
-public class BulldozerMovement : MonoBehaviour, InteractiveMachine
+public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
 {
     float speed = 5.0f;
     float angularSpeed = 45.0f;
@@ -35,6 +36,9 @@ public class BulldozerMovement : MonoBehaviour, InteractiveMachine
     {
         if (CameraSwitching.inBulldozer)
         {
+            // Making the current player the owner 
+            //photonView.RequestOwnership();
+
             // controls for moving the bulldozer
             var h = Input.GetAxisRaw("Horizontal");
             var v = Input.GetAxisRaw("Vertical");
@@ -71,6 +75,7 @@ public class BulldozerMovement : MonoBehaviour, InteractiveMachine
         player.transform.position = operatingPosition.position;
         player.transform.rotation = operatingPosition.rotation;
         player.transform.parent = operatingPosition;
+        int r = player.GetInstanceID();
 
         PlayerMovement pc = player.GetComponent<PlayerMovement>();
         if (pc)

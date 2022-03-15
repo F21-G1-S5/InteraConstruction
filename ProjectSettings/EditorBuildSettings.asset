@@ -31,7 +31,7 @@ EditorBuildSettings:
     guid: 4d26cc515fe107549948dc041ea1885f
   - enabled: 1
     path: Assets/Scenes/MultiPlayerScene.unity
-    guid: 1f9bbe85229aed145a5c5ae173779a68
+    guid: 7acfde344350fa04588acde2ac320361
   - enabled: 1
     path: Assets/Scenes/Menus/Identify.unity
     guid: 209dbf0d2d9bd9e4f80159fc829f249f
