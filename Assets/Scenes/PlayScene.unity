@@ -7939,7 +7939,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resume Game
+  m_Text: Press "T" to close
 --- !u!222 &290122920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13050,7 +13050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &527298291
 PrefabInstance:
@@ -15963,7 +15963,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resume Game
+  m_Text: 'Press "T" to close
+
+'
 --- !u!222 &637116671
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18861,7 +18863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -326}
+  m_AnchoredPosition: {x: 0, y: -343}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750237450
@@ -19625,7 +19627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resume Game
+  m_Text: Press "T" to close
 --- !u!222 &774802084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22640,7 +22642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886926901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.499, y: 3.48, z: 15.66}
+  m_LocalPosition: {x: 23.95, y: 3.48, z: 4.55}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26491,8 +26493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -115}
-  m_SizeDelta: {x: 322.5922, y: 200}
+  m_AnchoredPosition: {x: -2, y: -102.483246}
+  m_SizeDelta: {x: 322.5922, y: 212.5168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034400667
 MonoBehaviour:
@@ -26530,9 +26532,9 @@ MonoBehaviour:
   m_Text: "The Bulldozer, also called Dozer, is a powerful machine that is use for
     pushing earth or rocks, used in road building, farming, construction, and wrecking;
     it consists of a heavy, broad steel blade or plate mounted on the front of a
-    tractor.\n\nHow To use: \n- Use W To drive forward and S to drive back\n- Use
-    A to rotate left and D to rotate right\n- Use Right Click to raise blade and
-    Left Click to raise\n- Use LEFT ARROW to exit the machine"
+    tractor.\n\nHow To use: \n- Press W To drive forward and S to drive back\n- Press
+    A to rotate left and D to rotate right\n- Press Right Click to raise blade and
+    Left Click to raise\n- Press E to exit the machine"
 --- !u!222 &1034400668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28127,6 +28129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listenForInputs: 0
   isSitting: 0
+  anim: {fileID: 0}
 --- !u!1001 &1103515373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38383,7 +38386,7 @@ Transform:
   - {fileID: 1224417019}
   - {fileID: 1201417426}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1454455096
 PrefabInstance:
@@ -44464,6 +44467,7 @@ MonoBehaviour:
   anim: {fileID: 1101847862}
   singlePlayerMode: 1
   photonView: {fileID: 0}
+  playerCam: {fileID: 0}
 --- !u!136 &1648757465
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -48566,6 +48570,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 458460, guid: b39d34f9ee12e3d4f8a61720146b7939, type: 3}
   m_PrefabInstance: {fileID: 1827090088}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1827122211
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1565980637815108, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_Name
+      value: Pickable concrete
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093105743424652, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
 --- !u!1001 &1829061193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52364,7 +52425,7 @@ MonoBehaviour:
   m_Text: "A light tower is a piece of mobile equipment which has one or more high-intensity
     electric lamps and a mast. Almost always, the lights are attached to the mast,
     which is attached to a trailer, with a generator set to power the lamps.\n\nHow
-    To use: \n- Press 4 to turn the light on and off"
+    To use: \n- Press E to turn the light on and off"
 --- !u!222 &2005900520
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53700,7 +53761,7 @@ Transform:
   - {fileID: 1449266760}
   - {fileID: 1622268326}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2063182953
 PrefabInstance:
@@ -54237,8 +54298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -86}
-  m_SizeDelta: {x: 380.6747, y: 220}
+  m_AnchoredPosition: {x: -2, y: -79.26022}
+  m_SizeDelta: {x: 380.6747, y: 226.7398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085169219
 MonoBehaviour:
@@ -54279,7 +54340,7 @@ MonoBehaviour:
     commonly find scissor lifts used for a variety of tasks from performing building
     repairs to reaching materials stored high in warehouses.\n\nHow To use: \n- Press
     C to raise\n- Press Z to lower\n- Press either Z or C again to halt the lift\n-
-    Press LEFT ARROW to exit the machine"
+    Press E to exit the machine"
 --- !u!222 &2085169220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55263,6 +55324,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1453861080}
     m_Modifications:
+    - target: {fileID: 399075521526390817, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399075522042839294, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
+      propertyPath: m_Text
+      value: "A crane is a piece of heavy machinery that is a tower or platform that
+        is equipped with cables and pulleys. They are used to lift and lower materials.
+        The most common use of cranes is in the construction industry and heavy equipment
+        manufacturing.\n\nHow To use: \n- Press A to rotate left and D to rotate
+        right\n- Press C to raise the hook and Z to lower the hook\n- Press S to
+        move the hook towards the player and W away from the player\n- Press G to
+        grab objects and B to drop them with the hook\n- Press E to exit the machine"
+      objectReference: {fileID: 0}
+    - target: {fileID: 399075522042839294, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 399075522340213844, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
       propertyPath: minimap
       value: 
@@ -55354,6 +55433,10 @@ PrefabInstance:
     - target: {fileID: 399075522340213864, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399075523230293176, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
+      propertyPath: m_Text
+      value: Press "T" to close
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
@@ -55564,6 +55647,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3718095447053126083, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718095447053126083, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3718095447597754087, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
