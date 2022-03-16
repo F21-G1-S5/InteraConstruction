@@ -55460,6 +55460,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3718095447597754107, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
+      propertyPath: isGamePausable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
 --- !u!1001 &4098203729838515415

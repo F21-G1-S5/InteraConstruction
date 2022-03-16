@@ -29,7 +29,7 @@ public class TowerCraneHookPickup : MonoBehaviour {
     /// </summary>
     /// <param name="collision">The collision that is taking place.</param>
     public void OnTriggerStay(Collider collision) {
-        if (collision.gameObject.tag == "PickUpItem") {
+        if (collision.gameObject.CompareTag("PickUpItem")) {
             if (collision.gameObject.GetComponent<Rigidbody>().mass <= weightLimit) {
                 pickObj = collision.gameObject;
                 pickUp = true;
@@ -38,7 +38,7 @@ public class TowerCraneHookPickup : MonoBehaviour {
     }
 
     public void OnTriggerExit(Collider collision) {
-        if (collision.gameObject.name == "PickUpItem") {
+        if (collision.gameObject.CompareTag("PickUpItem")) {
             pickUp = false;
         }
     }
