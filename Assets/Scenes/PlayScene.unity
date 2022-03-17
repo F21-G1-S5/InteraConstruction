@@ -48417,6 +48417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54454054937909298, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119461cd4e870d6459fb119d9e2005e7, type: 3}
 --- !u!1001 &1829061193
@@ -55418,6 +55422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1461900916182869492, guid: df6cd21cc7342a7459f47816bee9c74c, type: 3}
+      propertyPath: m_Mass
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 1461900916182869501, guid: df6cd21cc7342a7459f47816bee9c74c, type: 3}
       propertyPath: m_Name
       value: PickUpCube
@@ -55431,6 +55439,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2061747707}
     m_Modifications:
+    - target: {fileID: 2105512910, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
+      propertyPath: weightLimit
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2189521948033723835, guid: 8e552d1dbb824f840b993901a6786da9, type: 3}
       propertyPath: m_RootOrder
       value: 4
