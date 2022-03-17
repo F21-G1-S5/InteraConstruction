@@ -22,6 +22,9 @@ public class TowerCraneHookPickup : MonoBehaviour {
         pickUp = false;
         pickObj.transform.parent = null;
         pickObj.GetComponent<Rigidbody>().isKinematic = false;
+        // temporary fix for object parenting bug in multiplayer
+        pickObj.transform.position = gameObject.transform.position;
+        pickObj.transform.rotation = gameObject.transform.rotation;
     }
 
     /// <summary>
