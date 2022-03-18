@@ -65,6 +65,11 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         }
     }
 
+    /// <summary>
+    /// When the player presses the interact key, call this function
+    /// </summary>
+    /// <param name="player">the object trying to interact</param>
+    /// <returns>Returns a reference to the machine, or null if the machine is being operated by someone else</returns>
     public InteractiveMachine StartInteraction(GameObject player)
     {
         if (operatingPlayer)
@@ -86,6 +91,10 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         return this;
     }
 
+    /// <summary>
+    /// End the interaction
+    /// </summary>
+    /// <param name="player">the object trying to leave the machine</param>
     public void EndInteraction(GameObject player)
     {
         operatingPlayer = null;
@@ -94,6 +103,10 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         player.transform.rotation = dismountPosition.rotation;
     }
 
+    /// <summary>
+    /// Calls the machine's own Update function, allowing it to react to user input and perform other
+    /// "operations" while a player is using it.
+    /// </summary>
     public void Operate()
     {
         // controls for moving the bulldozer

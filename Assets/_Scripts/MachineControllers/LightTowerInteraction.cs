@@ -48,6 +48,11 @@ public class LightTowerInteraction : MonoBehaviour, InteractiveMachine
         }
     }
 
+    /// <summary>
+    /// When the player presses the interact key, call this function
+    /// </summary>
+    /// <param name="player">the object trying to interact</param>
+    /// <returns>Returns a reference to the machine, or null if the machine is being operated by someone else</returns>
     public InteractiveMachine StartInteraction(GameObject player)
     {
         //if light is off, then turn it on by changing material
@@ -73,12 +78,20 @@ public class LightTowerInteraction : MonoBehaviour, InteractiveMachine
         return null;
     }
 
+    /// <summary>
+    /// End the interaction
+    /// </summary>
+    /// <param name="player">the object trying to leave the machine</param>
     public void EndInteraction(GameObject player)
     {
         // not needed for this machine, since we don't do anything to the player object
         return;
     }
 
+    /// <summary>
+    /// Calls the machine's own Update function, allowing it to react to user input and perform other
+    /// "operations" while a player is using it.
+    /// </summary>
     public void Operate()
     {
         // same as above

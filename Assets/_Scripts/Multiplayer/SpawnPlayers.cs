@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
+/// <summary>
+/// <c>SpawnPlayers</c> instantiates a player object over PhotonNetwork when the scene is loaded.
+/// </summary>
 public class SpawnPlayers : MonoBehaviour
 {
     public GameObject playerPrefab;

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Provides basic functions for the main menu, including scene-switching
+/// with or without a save file and exiting the application.
+/// </summary>
 public class MenuHandler : MonoBehaviour
 {
 

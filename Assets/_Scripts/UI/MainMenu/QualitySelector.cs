@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// Provides methods for modifying the Unity Player's quality settings
+/// </summary>
 public class QualitySelector : MonoBehaviour
 {
     public RenderPipelineAsset[] qualityLevels;

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages a UI element for Tutorials and Machine Descriptions
+/// </summary>
 public class PromptTutDes : MonoBehaviour
 {
     public GameObject uiObject; // this gameobject should be the tutorial prompt that shows up at the bottom of the screen

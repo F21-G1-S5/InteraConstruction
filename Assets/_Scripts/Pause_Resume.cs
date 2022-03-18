@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Provides methods to the in-game pause screen
+/// </summary>
 public class Pause_Resume : MonoBehaviour
 {
     public GameObject player;

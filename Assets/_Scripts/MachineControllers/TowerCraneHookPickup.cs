@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <c>TowerCraneHookPickup</c> is a component that may pickup or put down a single object at a time
+/// as long as that object weighs less than the given weight limit
+/// </summary>
 public class TowerCraneHookPickup : MonoBehaviour {
     public float weightLimit;
     private GameObject pickObj;
@@ -11,6 +15,9 @@ public class TowerCraneHookPickup : MonoBehaviour {
         weightLimit = 100f;
     }
 
+    /// <summary>
+    /// Pick up item if a valid GameObject is colliding with the Pickup object
+    /// </summary>
     public void PickUpItem() {
         if (pickUp) {
             pickObj.GetComponent<Rigidbody>().isKinematic = true;
@@ -18,6 +25,9 @@ public class TowerCraneHookPickup : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Release the GameObject currently picked up by this pickup object
+    /// </summary>
     public void PutDownItem() {
         pickUp = false;
         pickObj.transform.parent = null;

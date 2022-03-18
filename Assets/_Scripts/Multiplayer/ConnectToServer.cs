@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Photon.Pun;
 
+/// <summary>
+/// <c>ConnectToServer</c> connects to the Photon Network when the scene starts
+/// and exposes the required menu buttons upon successfully connecting
+/// </summary>
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     public GameObject hostBtn;
@@ -18,7 +19,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PhotonNetwork.JoinLobby();
+        PhotonNetwork.JoinLobby(); // connect to master lobby
     }
 
     public override void OnJoinedLobby()

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Provides a generic way for UI elements to trigger events when a key is pressed.
+/// KeyCide abd UnityEvent should be set in the editor.
+/// </summary>
 public class PromptKeyListener : MonoBehaviour
 {
     [SerializeField] private TutorialPrompt tutorial;
@@ -29,6 +33,6 @@ public class PromptKeyListener : MonoBehaviour
 
     public void TriggerHideTutorial()
     {
-        tutorial.HideTutorial();
+        tutorial?.HideTutorial();
     }
 }

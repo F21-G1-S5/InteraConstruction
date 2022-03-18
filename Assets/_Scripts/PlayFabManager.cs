@@ -6,6 +6,11 @@ using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages communication with PlayFab server.
+/// 
+/// Provides methods for logging in and registering through PlayFab
+/// </summary>
 public class PlayFabManager : MonoBehaviour
 {
     [Header("UI")]
@@ -40,11 +45,11 @@ public class PlayFabManager : MonoBehaviour
 
     void OnLoginSuccess(LoginResult result)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1); // loads the main scene of the application
     }
 
     void OnError(PlayFabError error)
     {
-        //
+        // TODO: display PlayFab response though a text element in the UI
     }
 }

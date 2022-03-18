@@ -4,6 +4,10 @@ using UnityEngine;
 
 /// <summary>
 /// Class <c>CameraSwitching</c> toggles cameras (and relevant components) on/off fepending on which perspective the player is using
+/// 
+/// <remarks>
+/// This class is deprecated and has been replaced by the InteractiveMachine interface in order to support multiple machines and machine
+/// types without having to manually program them into this script.</remarks>
 /// </summary>
 public class CameraSwitching : MonoBehaviour
 {

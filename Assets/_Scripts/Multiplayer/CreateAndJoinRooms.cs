@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// <c>CreateAndJoinRooms</c> provides event handlers to the scene for both hosting
+/// and joining a room through Photon
+/// </summary>
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
     public InputField createRoomInput;

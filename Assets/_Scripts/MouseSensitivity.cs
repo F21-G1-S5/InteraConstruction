@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Handles third-person mouse movement and camera rotation.
+/// Also provides methods for adjusting the camera's sensitivity in-game
+/// </summary>
 [AddComponentMenu("Camera-Control/Mouse Look")]
 
 public class MouseSensitivity : MonoBehaviour

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// WIP
 public class Teleportation : MonoBehaviour
 {
     private Transform cp1;
