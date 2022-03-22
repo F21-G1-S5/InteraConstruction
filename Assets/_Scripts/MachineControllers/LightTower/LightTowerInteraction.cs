@@ -26,26 +26,7 @@ public class LightTowerInteraction : MonoBehaviour, InteractiveMachine
     
     void Update()
     {
-        //if light is off, then turn it on by changing material
-        if (lightOn == false && Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            // Set the new material on the GameObject
-            renderer.sharedMaterial = materials[1];
-            // turn lightning for spotlight on
-            light.SetActive(true);
-
-            lightOn = true;
-
-        } //if light is on, then turn off on by changing material
-        else if(lightOn == true && Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            // Set the new material on the GameObject
-            renderer.sharedMaterial = materials[0];
-            // turn lightning for spotlight off
-            light.SetActive(false);
-
-            lightOn = false;
-        }
+        
     }
 
     /// <summary>

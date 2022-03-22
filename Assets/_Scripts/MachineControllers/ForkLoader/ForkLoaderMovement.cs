@@ -90,10 +90,10 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             forks.Lift(forksSpeed * Time.deltaTime);
             //forks.PlayLiftAudio();
         }
-        //else if (lower > 0)
-        //{
-        //    dozerBlade.Lower(bladeSpeed * Time.deltaTime);
-        //    dozerBlade.PlayLiftAudio();
-        //}
+        else if (lower > 0)
+        {
+            forks.Lower(forksSpeed * Time.deltaTime);
+            //forks.PlayLiftAudio();
+        }
     }
 }

@@ -23,17 +23,7 @@ public class ScissorLiftMovement : MonoBehaviour, InteractiveMachine
     /// </summary>
     void Update()
     {
-        if (CameraSwitching.inScissorLift)
-        {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                lift.Lift();
-            }
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                lift.Lower();
-            }
-        }
+        
     }
 
     /// <summary>

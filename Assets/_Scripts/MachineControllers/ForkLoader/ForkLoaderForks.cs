@@ -8,14 +8,14 @@ using UnityEngine;
 public class ForkLoaderForks : MonoBehaviour
 {
     [SerializeField] GameObject forksGo;
-    [SerializeField] float forksPos;
+    [SerializeField] float height = 0;
     [SerializeField] float maxLift = 1; // max angle pos
-    [SerializeField] float lift = 0; // initial pos
+    [SerializeField] Transform root; // initial pos
 
     void Start()
     {
         //forksPos = forksGo.transform.position.y;
-        Lift(lift);
+        Lift(height);
     }
 
  
@@ -26,16 +26,35 @@ public class ForkLoaderForks : MonoBehaviour
 
     public void Lift(float amount)
     {
-        forksPos = forksGo.transform.position.y;
-        lift += amount;
-        if (lift > maxLift) 
+        height += amount;
+        if (height > maxLift)
         {
-            lift = maxLift;
+            height = maxLift;
         }
         else
         {
-            forksPos += lift;
+            forksGo.transform.position = new Vector3(
+                forksGo.transform.position.x,
+                root.position.y + height,
+                forksGo.transform.position.z);
         }
-            
+
+    }
+
+    public void Lower(float amount)
+    {
+        height -= amount;
+        if (height < 0)
+        {
+            height = 0;
+        }
+        else
+        {
+            forksGo.transform.position = new Vector3(
+                forksGo.transform.position.x,
+                root.position.y + height,
+                forksGo.transform.position.z);
+        }
+
     }
 }

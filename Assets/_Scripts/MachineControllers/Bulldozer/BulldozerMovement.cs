@@ -34,35 +34,7 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     // Update is called once per frame
     void Update()
     {
-        if (CameraSwitching.inBulldozer)
-        {
-            // Making the current player the owner 
-            //photonView.RequestOwnership();
 
-            // controls for moving the bulldozer
-            var h = Input.GetAxisRaw("Horizontal");
-            var v = Input.GetAxisRaw("Vertical");
-            transform.Rotate(0, h * angularSpeed * Time.deltaTime, 0);
-            transform.Translate(0, 0, v * speed * Time.deltaTime);
-
-            // controls for raising and lowering the bulldozer blade
-            var raise = Input.GetAxis("Fire1");
-            var lower = Input.GetAxis("Fire2");
-            if (raise > 0)
-            {
-                dozerBlade.Lift(bladeSpeed * Time.deltaTime);
-                dozerBlade.PlayLiftAudio();
-            }
-            else if (lower > 0)
-            {
-                dozerBlade.Lower(bladeSpeed * Time.deltaTime);
-                dozerBlade.PlayLiftAudio();
-            }
-            else
-            {
-                dozerBlade.StopLiftAudio();
-            }
-        }
     }
 
     /// <summary>
