@@ -1,4 +1,4 @@
-InteraConstruction: The Unity Zonstruction Zone Simulator
+InteraConstruction: The Unity Construction Zone Simulator
 
 In the world of construction labour, workers need to be extremely mindful and cautious of their work environment; it is a profession that requires proper training. It has been reported that over 60% of workplace accidents involve individuals with less than 1 year of experience or who are unfamiliar with certain machinery. Workplace incidents include trips and falls from heights, being strucked being moving vehicles, collisions with falling objects, and more. Not only do these incidents severely affect workers, but businesses end up spending more capital on medical expenses, compensation, and project delays than they do on safety training.
   
