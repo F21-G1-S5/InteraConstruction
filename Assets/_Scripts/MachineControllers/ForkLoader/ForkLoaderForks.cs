@@ -12,6 +12,10 @@ public class ForkLoaderForks : MonoBehaviour
     [SerializeField] float maxLift = 1; // max angle pos
     [SerializeField] Transform root; // initial pos
 
+    public AudioSource LiftAudio;
+    public AudioSource startUpAudio;
+    public AudioSource idleAudio;
+
     void Start()
     {
         //forksPos = forksGo.transform.position.y;
@@ -56,5 +60,38 @@ public class ForkLoaderForks : MonoBehaviour
                 forksGo.transform.position.z);
         }
 
+    }
+
+    public void PlayLiftAudio()
+    {
+        if (!LiftAudio.isPlaying)
+        {
+            LiftAudio.Play();
+        }
+    }
+
+    public void StopLiftAudio()
+    {
+        LiftAudio.Stop();
+    }
+
+    public void PlayStartUpAudio()
+    {
+        startUpAudio.Play();
+    }
+
+    public void StopStartUpAudio()
+    {
+        startUpAudio.Stop();
+    }
+
+    public void PlayIdleAudio()
+    {
+        idleAudio.PlayDelayed(startUpAudio.clip.length); //play audio after startup clip has ended
+    }
+
+    public void StopIdleAudio()
+    {
+        idleAudio.Stop();
     }
 }

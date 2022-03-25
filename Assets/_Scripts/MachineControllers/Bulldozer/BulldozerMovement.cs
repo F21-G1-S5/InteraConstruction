@@ -60,6 +60,9 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             pc.SetPlayerSitting();
         }
 
+        dozerBlade.PlayStartUpAudio();
+        dozerBlade.PlayIdleAudio();
+
         return this;
     }
 
@@ -69,6 +72,8 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     /// <param name="player">the object trying to leave the machine</param>
     public void EndInteraction(GameObject player)
     {
+        dozerBlade.StopStartUpAudio();
+        dozerBlade.StopIdleAudio();
         operatingPlayer = null;
         player.transform.parent = null;
         player.transform.position = dismountPosition.position;

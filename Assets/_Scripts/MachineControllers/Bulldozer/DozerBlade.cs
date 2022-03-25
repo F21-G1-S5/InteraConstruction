@@ -14,6 +14,8 @@ public class DozerBlade : MonoBehaviour
 
     //public AudioSource bulldozerAudio;
     public AudioSource LiftAudio;
+    public AudioSource startUpAudio;
+    public AudioSource idleAudio;
 
     private float rootAngle;
 
@@ -63,5 +65,25 @@ public class DozerBlade : MonoBehaviour
     public void StopLiftAudio()
     {
         LiftAudio.Stop();
+    }
+
+    public void PlayStartUpAudio()
+    {
+        startUpAudio.Play();
+    }
+
+    public void StopStartUpAudio()
+    {
+        startUpAudio.Stop();
+    }
+
+    public void PlayIdleAudio()
+    {
+        idleAudio.PlayDelayed(startUpAudio.clip.length); //play audio after startup clip has ended
+    }
+
+    public void StopIdleAudio()
+    {
+        idleAudio.Stop();
     }
 }

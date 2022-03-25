@@ -32,6 +32,8 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     {
     }
 
+
+
     /// <summary>
     /// When the player presses the interact key, call this function
     /// </summary>
@@ -55,6 +57,9 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             pc.SetPlayerSitting();
         }
 
+        forks.PlayStartUpAudio();
+        forks.PlayIdleAudio();
+
         return this;
     }
 
@@ -64,6 +69,8 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     /// <param name="player">the object trying to leave the machine</param>
     public void EndInteraction(GameObject player)
     {
+        forks.StopStartUpAudio();
+        forks.StopIdleAudio();
         operatingPlayer = null;
         player.transform.parent = null;
         player.transform.position = dismountPosition.position;
@@ -76,6 +83,7 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     /// </summary>
     public void Operate()
     {
+
         // controls for moving the fork
         var h = Input.GetAxisRaw("Horizontal");
         var v = Input.GetAxisRaw("Vertical");
@@ -88,12 +96,16 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         if (raise > 0)
         {
             forks.Lift(forksSpeed * Time.deltaTime);
-            //forks.PlayLiftAudio();
+            forks.PlayLiftAudio();
         }
         else if (lower > 0)
         {
             forks.Lower(forksSpeed * Time.deltaTime);
-            //forks.PlayLiftAudio();
+            forks.PlayLiftAudio();
+        }
+        else
+        {
+            forks.StopLiftAudio();
         }
     }
 }
