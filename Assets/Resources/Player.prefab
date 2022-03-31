@@ -53,6 +53,8 @@ MonoBehaviour:
   singlePlayerMode: 0
   photonView: {fileID: 7130258971569941137}
   playerCam: {fileID: 7130258971957566620}
+  moveInput: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0, z: 0}
 --- !u!143 &7130258971569941151
 CharacterController:
   m_ObjectHideFlags: 0
@@ -224,6 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 5
   playerBody: {fileID: 7130258971569941150}
+  player: {fileID: 0}
+  walkingHeadBobSpeed: 14
+  walkingHeadBobAmount: 0.05
 --- !u!114 &7130258971957566609
 MonoBehaviour:
   m_ObjectHideFlags: 0

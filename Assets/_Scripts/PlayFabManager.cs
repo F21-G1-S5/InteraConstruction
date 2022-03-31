@@ -93,9 +93,9 @@ public class PlayFabManager : MonoBehaviour
         var userTypeRequest = new UpdateUserDataRequest
         {
             Data = new Dictionary<string, string>
-                    {
-                        { "userType", userType }
-                    }
+            {
+                { "userType", userType }
+            }
         };
         PlayFabClientAPI.UpdateUserData(userTypeRequest,
             (UpdateUserDataResult result) => { Debug.Log("Sucessfully registered user type " + userType); },
@@ -137,7 +137,7 @@ public class PlayFabManager : MonoBehaviour
     void OnLoginSuccess(LoginResult result)
     {
         Debug.Log("Login successful!");
-        FetchUserData();
+        PlayFabDataManager.LoadUserData();
         SceneManager.LoadScene(1); // loads the main scene of the application
     }
 

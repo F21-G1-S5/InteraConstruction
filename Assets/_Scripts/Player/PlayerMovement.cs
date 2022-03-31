@@ -37,12 +37,22 @@ public class PlayerMovement : MonoBehaviour{
             if (!photonView.IsMine)
             {
                 playerCam.SetActive(false);
+
+            }
+            else
+            {
+                // if we are the local player, link this player with the pause menu for save/load functions
+                Pause_Resume pr = FindObjectOfType<Pause_Resume>();
+                if (pr)
+                {
+                    pr.player = this.gameObject;
+                }
             }
         }
     }
     private void Update()
     {
-        if (singlePlayerMode || photonView.IsMine)
+        if (isLocalPlayer())
         {
             if (operatingMachine != null)
             {

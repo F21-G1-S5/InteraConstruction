@@ -12,6 +12,7 @@ public class Pause_Resume : MonoBehaviour
 
     public GameObject targetMenu;
     public bool isGamePausable = true;
+    public bool usePlayFabSave = true;
     public static bool gamePaused = false;
 
     // Start is called before the first frame update
@@ -69,13 +70,50 @@ public class Pause_Resume : MonoBehaviour
 
     public void SaveGame()
     {
-        JSONSaveSystem.SavePlayer(player, "savefile1");
+        if (player == null)
+        {
+            return;
+        }
+
+        if (usePlayFabSave)
+        {
+            PlayFabDataManager.SaveUserData(player);
+        }
+        else
+        {
+            JSONSaveSystem.SavePlayer(player, "savefile1");
+        }
     }
 
     public void LoadGame()
     {
-        PlayerData pData = JSONSaveSystem.LoadPlayer("savefile1");
-        
+        if (player == null)
+        {
+            return;
+        }
+
+        PlayerData pData;
+        if (usePlayFabSave)
+        {
+            PlayFabDataManager.LoadUserData(
+                (result) =>
+                {
+                    pData = result;
+                    Debug.Log("moving player");
+                    Debug.Log(pData);
+                    MovePlayer(pData);
+                });
+        }
+        else
+        {
+            pData = JSONSaveSystem.LoadPlayer("savefile1");
+
+            MovePlayer(pData);
+        }
+    }
+
+    private void MovePlayer(PlayerData pData)
+    {
         // disable character controller to allow for setting the player position
         CharacterController cc = player.GetComponent<CharacterController>();
         if (cc != null)
