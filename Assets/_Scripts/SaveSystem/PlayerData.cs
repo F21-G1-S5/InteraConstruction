@@ -48,4 +48,20 @@ public class PlayerData
     {
         return new Quaternion(rotation[0], rotation[1], rotation[2], rotation[3]);
     }
+
+    public override string ToString()
+    {
+        string output = "[";
+        if (position != null)
+        {
+            for (int i = 0; i < position.Length; i++)
+            {
+                if (i > 0) output = output + ",";
+                output = output + position[i].ToString();
+            }
+        }
+        output = output + "]";
+
+        return output;
+    }
 }
