@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour{
 
     InteractiveMachine operatingMachine;
 
+    //Variables for progression
+    [SerializeField] private GameObject progressionPanelCrane;
+    [SerializeField] private GameObject progressionPanelBulldozer;
+
     //Pase Menu Variables
     //public GameObject targetMenu;
     //public bool isPauseMenuActive;
@@ -61,6 +65,11 @@ public class PlayerMovement : MonoBehaviour{
                 {
                     // return to normal player controls
                     operatingMachine.EndInteraction(gameObject);
+                    
+                    //deactivate progression panels when exiting machines
+                    progressionPanelCrane.SetActive(false);
+                    progressionPanelBulldozer.SetActive(false);
+
                     operatingMachine = null;
                     cc.enabled = true;
 
@@ -114,6 +123,20 @@ public class PlayerMovement : MonoBehaviour{
                 InteractiveMachine machine = collider.gameObject.GetComponent<InteractiveMachine>();
                 if (machine != null)
                 {
+                    //Identify each machine, to activate its correspondent UI Progression panel
+                    Debug.Log(machine);
+                    switch (machine.ToString())
+                    {
+                        case "towerCrane_1 (TowerCraneController)":
+                            progressionPanelCrane.SetActive(true);
+                            break;
+                        case "Buldozer_blade (BulldozerMovement)":
+                            progressionPanelBulldozer.SetActive(true);
+                            break;
+
+                    }
+                    
+
                     operatingMachine = machine.StartInteraction(gameObject);
                     if (operatingMachine != null)
                     {

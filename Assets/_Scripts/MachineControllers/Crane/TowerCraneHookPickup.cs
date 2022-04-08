@@ -10,6 +10,8 @@ public class TowerCraneHookPickup : MonoBehaviour {
     public float weightLimit;
     private GameObject pickObj;
     public bool pickUp;
+    [SerializeField] private SOProgressPoint checkpoint4;
+
 
     private void Start() {
         weightLimit = 100f;
@@ -22,6 +24,7 @@ public class TowerCraneHookPickup : MonoBehaviour {
         if (pickUp) {
             pickObj.GetComponent<Rigidbody>().isKinematic = true;
             pickObj.transform.parent = this.gameObject.transform;
+            
         }
     }
 

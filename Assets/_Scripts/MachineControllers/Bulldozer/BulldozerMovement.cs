@@ -22,6 +22,11 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
 
     private GameObject operatingPlayer;
 
+    //Variables for progression system
+    [SerializeField] private SOProgressPoint checkpoint1;
+    [SerializeField] private SOProgressPoint checkpoint2;
+    [SerializeField] private SOProgressPoint checkpoint3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,8 +94,29 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         // controls for moving the bulldozer
         var h = Input.GetAxisRaw("Horizontal");
         var v = Input.GetAxisRaw("Vertical");
+
         transform.Rotate(0, h * angularSpeed * Time.deltaTime, 0);
         transform.Translate(0, 0, v * speed * Time.deltaTime);
+
+        //Progression Related: check if player rotated the bulldozer
+        if(h > 0)
+        {
+            if (!checkpoint1.IsCompleted)
+            {
+                checkpoint1.SetCompleted();
+            }
+
+        }
+
+        //Progression Related: check if player drove the bulldozer
+        if (v > 0)
+        {
+            if (!checkpoint2.IsCompleted)
+            {
+                checkpoint2.SetCompleted();
+            }
+
+        }
 
         // controls for raising and lowering the bulldozer blade
         var raise = Input.GetAxis("Fire1");
@@ -99,6 +125,10 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         {
             dozerBlade.Lift(bladeSpeed * Time.deltaTime);
             dozerBlade.PlayLiftAudio();
+            if (!checkpoint3.IsCompleted)
+            {
+                checkpoint3.SetCompleted();
+            }
         }
         else if (lower > 0)
         {
