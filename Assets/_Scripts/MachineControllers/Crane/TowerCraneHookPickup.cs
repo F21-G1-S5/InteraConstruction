@@ -32,6 +32,10 @@ public class TowerCraneHookPickup : MonoBehaviour {
     /// Release the GameObject currently picked up by this pickup object
     /// </summary>
     public void PutDownItem() {
+        if (pickObj == null)
+        {
+            return;
+        }
         pickUp = false;
         pickObj.transform.parent = null;
         pickObj.GetComponent<Rigidbody>().isKinematic = false;
@@ -56,6 +60,7 @@ public class TowerCraneHookPickup : MonoBehaviour {
     public void OnTriggerExit(Collider collision) {
         if (collision.gameObject.CompareTag("PickUpItem")) {
             pickUp = false;
+            pickObj = null;
         }
     }
 }
