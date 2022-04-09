@@ -22,6 +22,12 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
 
     private GameObject operatingPlayer;
 
+    //Variables for progression system
+    [SerializeField] private SOProgressPoint checkpoint1;
+    [SerializeField] private SOProgressPoint checkpoint2;
+    [SerializeField] private SOProgressPoint checkpoint3;
+    [SerializeField] private SOProgressPoint checkpoint4;
+
     void Start()
     {
         
@@ -90,6 +96,26 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         transform.Rotate(0, h * angularSpeed * Time.deltaTime, 0);
         transform.Translate(0, 0, v * speed * Time.deltaTime);
 
+        //Progression Related: check if player rotated the bulldozer
+        if (h > 0)
+        {
+            if (!checkpoint1.IsCompleted)
+            {
+                checkpoint1.SetCompleted();
+            }
+
+        }
+
+        //Progression Related: check if player drove the bulldozer
+        if (v > 0)
+        {
+            if (!checkpoint2.IsCompleted)
+            {
+                checkpoint2.SetCompleted();
+            }
+
+        }
+
         // controls for raising and lowering the bulldozer blade
         var raise = Input.GetAxis("Fire1");
         var lower = Input.GetAxis("Fire2");
@@ -97,23 +123,38 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         {
             forks.Lift(forksSpeed * Time.deltaTime);
             forks.PlayLiftAudio();
+            
         }
         else if (lower > 0)
         {
             forks.Lower(forksSpeed * Time.deltaTime);
             forks.PlayLiftAudio();
+
+            if (!checkpoint3.IsCompleted)
+            {
+                checkpoint3.SetCompleted();
+            }
         }
         else
         {
             forks.StopLiftAudio();
         }
 
-        if(Input.GetKeyDown(KeyCode.G)) { // Force release to put objects up higher
+        if (Input.GetKeyDown(KeyCode.G))
+        { // Froce grap to grab items from height
+            forks.PickUpItem();
+
+
+            if (!checkpoint4.IsCompleted)
+            {
+                checkpoint4.SetCompleted();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.B)) { // Force release to put objects up higher
             forks.PutDownItem();
         }
 
-        if(Input.GetKeyDown(KeyCode.F)) { // Froce grap to grab items from height
-            forks.PickUpItem();
-        }
+
     }
 }

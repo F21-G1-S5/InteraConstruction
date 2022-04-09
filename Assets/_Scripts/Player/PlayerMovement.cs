@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour{
     //Variables for progression
     [SerializeField] private GameObject progressionPanelCrane;
     [SerializeField] private GameObject progressionPanelBulldozer;
+    [SerializeField] private GameObject progressionPanelForkloader;
 
     //Pase Menu Variables
     //public GameObject targetMenu;
@@ -69,6 +70,7 @@ public class PlayerMovement : MonoBehaviour{
                     //deactivate progression panels when exiting machines
                     progressionPanelCrane.SetActive(false);
                     progressionPanelBulldozer.SetActive(false);
+                    progressionPanelForkloader.SetActive(false);
 
                     operatingMachine = null;
                     cc.enabled = true;
@@ -132,6 +134,9 @@ public class PlayerMovement : MonoBehaviour{
                             break;
                         case "Buldozer_blade (BulldozerMovement)":
                             progressionPanelBulldozer.SetActive(true);
+                            break;
+                        case "Fork Loader (ForkLoaderMovement)":
+                            progressionPanelForkloader.SetActive(true);
                             break;
 
                     }
