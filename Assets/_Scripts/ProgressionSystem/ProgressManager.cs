@@ -34,7 +34,7 @@ public class ProgressManager : MonoBehaviour
         {
             point.IsCompleted = false;
             // also listen for updates using the callback action
-            point.Listen(OnProgressCompleted);
+            //point.Listen(OnProgressCompleted);
         }
 
         // display the first objective

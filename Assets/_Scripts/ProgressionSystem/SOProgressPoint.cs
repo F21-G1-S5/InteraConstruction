@@ -25,6 +25,6 @@ public class SOProgressPoint : ScriptableObject
     public void SetCompleted()
     {
         IsCompleted = true;
-        OnCompleted.Invoke();
+        //OnCompleted.Invoke();
     }
 }
