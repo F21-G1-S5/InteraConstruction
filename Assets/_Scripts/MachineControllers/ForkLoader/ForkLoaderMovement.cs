@@ -107,5 +107,13 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         {
             forks.StopLiftAudio();
         }
+
+        if(Input.GetKeyDown(KeyCode.G)) { // Force release to put objects up higher
+            forks.PutDownItem();
+        }
+
+        if(Input.GetKeyDown(KeyCode.F)) { // Froce grap to grab items from height
+            forks.PickUpItem();
+        }
     }
 }
