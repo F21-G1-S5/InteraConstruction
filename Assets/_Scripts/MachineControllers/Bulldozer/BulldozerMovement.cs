@@ -26,6 +26,7 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     [SerializeField] private SOProgressPoint checkpoint1;
     [SerializeField] private SOProgressPoint checkpoint2;
     [SerializeField] private SOProgressPoint checkpoint3;
+    [SerializeField] private SOProgressPoint checkpoint4;
 
     // Start is called before the first frame update
     void Start()
@@ -134,6 +135,10 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         {
             dozerBlade.Lower(bladeSpeed * Time.deltaTime);
             dozerBlade.PlayLiftAudio();
+            if (!checkpoint4.IsCompleted)
+            {
+                checkpoint4.SetCompleted();
+            }
         }
         else
         {
