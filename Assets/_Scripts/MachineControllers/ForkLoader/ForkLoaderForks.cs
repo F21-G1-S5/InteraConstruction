@@ -8,6 +8,7 @@ using UnityEngine;
 public class ForkLoaderForks : MonoBehaviour
 {
     [SerializeField] GameObject forksGo;
+    [SerializeField] float weightLimit;
     [SerializeField] float height = 0;
     [SerializeField] float maxLift = 1; // max angle pos
     [SerializeField] Transform root; // initial pos
@@ -15,6 +16,9 @@ public class ForkLoaderForks : MonoBehaviour
     public AudioSource LiftAudio;
     public AudioSource startUpAudio;
     public AudioSource idleAudio;
+
+    private GameObject pickObj;
+    private bool pickUp;
 
     void Start()
     {
@@ -60,6 +64,51 @@ public class ForkLoaderForks : MonoBehaviour
                 forksGo.transform.position.z);
         }
 
+    }
+
+    /// <summary>
+    /// Pick up item if a valid GameObject is colliding with the Pickup object
+    /// </summary>
+    public void PickUpItem() {
+        if(pickUp) {
+            pickObj.GetComponent<Rigidbody>().isKinematic = true;
+            pickObj.transform.parent = this.gameObject.transform;
+        }
+    }
+
+    /// <summary>
+    /// Release the GameObject currently picked up by this pickup object
+    /// </summary>
+    public void PutDownItem() {
+        if(pickObj == null) {
+            return;
+        }
+        pickUp = false;
+        pickObj.transform.parent = null;
+        pickObj.GetComponent<Rigidbody>().isKinematic = false;
+        // temporary fix for object parenting bug in multiplayer
+        pickObj.transform.position = gameObject.transform.position;
+        pickObj.transform.rotation = gameObject.transform.rotation;
+    }
+
+    /// <summary>
+    /// Move items tagged with "PickUpItem" with Forklift.
+    /// </summary>
+    /// <param name="collision">The collision that is taking place.</param>
+    private void OnTriggerStay(Collider other) {
+        if(other.gameObject.CompareTag("PickUpItem")) {
+            if(other.gameObject.GetComponent<Rigidbody>().mass <= weightLimit) {
+                pickObj = other.gameObject;
+                pickUp = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.gameObject.CompareTag("PickUpItem")) {
+            pickUp = false;
+            pickObj = null;
+        }
     }
 
     public void PlayLiftAudio()

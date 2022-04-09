@@ -1,0 +1,526 @@
+fileFormatVersion: 2
+guid: e734247ceca404b308300d8615178511
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: DUMP_TRUCK_body
+  - first:
+      1: 100004
+    second: DUMP_TRUCK_Box
+  - first:
+      1: 100006
+    second: Front_axis
+  - first:
+      1: 100008
+    second: Left_front_wheel
+  - first:
+      1: 100010
+    second: Left_rear_wheel
+  - first:
+      1: 100012
+    second: polySurface16
+  - first:
+      1: 100014
+    second: polySurface17
+  - first:
+      1: 100016
+    second: polySurface21
+  - first:
+      1: 100018
+    second: polySurface22
+  - first:
+      1: 100020
+    second: Rear_axis
+  - first:
+      1: 100022
+    second: Right_front_wheel
+  - first:
+      1: 100024
+    second: Right_rear_wheel
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: DUMP_TRUCK_body
+  - first:
+      4: 400004
+    second: DUMP_TRUCK_Box
+  - first:
+      4: 400006
+    second: Front_axis
+  - first:
+      4: 400008
+    second: Left_front_wheel
+  - first:
+      4: 400010
+    second: Left_rear_wheel
+  - first:
+      4: 400012
+    second: polySurface16
+  - first:
+      4: 400014
+    second: polySurface17
+  - first:
+      4: 400016
+    second: polySurface21
+  - first:
+      4: 400018
+    second: polySurface22
+  - first:
+      4: 400020
+    second: Rear_axis
+  - first:
+      4: 400022
+    second: Right_front_wheel
+  - first:
+      4: 400024
+    second: Right_rear_wheel
+  - first:
+      23: 2300000
+    second: DUMP_TRUCK_body
+  - first:
+      23: 2300002
+    second: DUMP_TRUCK_Box
+  - first:
+      23: 2300004
+    second: Front_axis
+  - first:
+      23: 2300006
+    second: Left_front_wheel
+  - first:
+      23: 2300008
+    second: Left_rear_wheel
+  - first:
+      23: 2300010
+    second: polySurface16
+  - first:
+      23: 2300012
+    second: polySurface17
+  - first:
+      23: 2300014
+    second: polySurface21
+  - first:
+      23: 2300016
+    second: polySurface22
+  - first:
+      23: 2300018
+    second: Rear_axis
+  - first:
+      23: 2300020
+    second: Right_front_wheel
+  - first:
+      23: 2300022
+    second: Right_rear_wheel
+  - first:
+      33: 3300000
+    second: DUMP_TRUCK_body
+  - first:
+      33: 3300002
+    second: DUMP_TRUCK_Box
+  - first:
+      33: 3300004
+    second: Front_axis
+  - first:
+      33: 3300006
+    second: Left_front_wheel
+  - first:
+      33: 3300008
+    second: Left_rear_wheel
+  - first:
+      33: 3300010
+    second: polySurface16
+  - first:
+      33: 3300012
+    second: polySurface17
+  - first:
+      33: 3300014
+    second: polySurface21
+  - first:
+      33: 3300016
+    second: polySurface22
+  - first:
+      33: 3300018
+    second: Rear_axis
+  - first:
+      33: 3300020
+    second: Right_front_wheel
+  - first:
+      33: 3300022
+    second: Right_rear_wheel
+  - first:
+      43: 4300000
+    second: DUMP_TRUCK_body
+  - first:
+      43: 4300002
+    second: polySurface17
+  - first:
+      43: 4300004
+    second: polySurface22
+  - first:
+      43: 4300006
+    second: DUMP_TRUCK_Box
+  - first:
+      43: 4300008
+    second: polySurface16
+  - first:
+      43: 4300010
+    second: polySurface21
+  - first:
+      43: 4300012
+    second: Front_axis
+  - first:
+      43: 4300014
+    second: Rear_axis
+  - first:
+      43: 4300016
+    second: Left_front_wheel
+  - first:
+      43: 4300018
+    second: Right_front_wheel
+  - first:
+      43: 4300020
+    second: Right_rear_wheel
+  - first:
+      43: 4300022
+    second: Left_rear_wheel
+  - first:
+      74: 7400000
+    second: Cat_truck_6
+  - first:
+      74: 7400002
+    second: DUMP_TRUCK_FULL_ANIM
+  - first:
+      74: 7400004
+    second: box_down
+  - first:
+      74: 7400006
+    second: box_up
+  - first:
+      74: 7400008
+    second: box_hold
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: DUMP_TRUCK_FULL_ANIM
+      takeName: DUMP_TRUCK_v2
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DUMP_TRUCK_body
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface16
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface21
+        weight: 1
+      - path: DUMP_TRUCK_body/Front_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_rear_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface17
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface22
+        weight: 1
+      - path: DUMP_TRUCK_body/Rear_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_rear_wheel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: box_up
+      takeName: DUMP_TRUCK_v2
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DUMP_TRUCK_body
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface16
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface21
+        weight: 1
+      - path: DUMP_TRUCK_body/Front_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_rear_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface17
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface22
+        weight: 1
+      - path: DUMP_TRUCK_body/Rear_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_rear_wheel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: box_down
+      takeName: DUMP_TRUCK_v2
+      internalID: 0
+      firstFrame: 15
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DUMP_TRUCK_body
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface16
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface21
+        weight: 1
+      - path: DUMP_TRUCK_body/Front_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_rear_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface17
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface22
+        weight: 1
+      - path: DUMP_TRUCK_body/Rear_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_rear_wheel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: box_hold
+      takeName: DUMP_TRUCK_v2
+      internalID: 0
+      firstFrame: 15
+      lastFrame: 15.1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DUMP_TRUCK_body
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface16
+        weight: 1
+      - path: DUMP_TRUCK_body/DUMP_TRUCK_Box/polySurface21
+        weight: 1
+      - path: DUMP_TRUCK_body/Front_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Left_rear_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface17
+        weight: 1
+      - path: DUMP_TRUCK_body/polySurface22
+        weight: 1
+      - path: DUMP_TRUCK_body/Rear_axis
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_front_wheel
+        weight: 1
+      - path: DUMP_TRUCK_body/Right_rear_wheel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

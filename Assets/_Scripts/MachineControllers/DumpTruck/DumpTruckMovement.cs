@@ -4,10 +4,12 @@ using UnityEngine;
 
 
 
-public class DumpTruckMovement : MonoBehaviour, InteractiveMachine
-{
+public class DumpTruckMovement : MonoBehaviour, InteractiveMachine {
     float speed = 5.0f;
     float angularSpeed = 45.0f;
+
+    [SerializeField] DumpTruckDump dumpTruckDump;
+    [SerializeField] float boxRotateSpeed = 0.2f;
 
     [SerializeField] private Transform operatingPosition;
     [SerializeField] private Transform dismountPosition;
@@ -21,8 +23,7 @@ public class DumpTruckMovement : MonoBehaviour, InteractiveMachine
     /// <summary>
     /// method <c>Update</c> calls lifting and lowering methods of the scissorlift when the player hits the Z and C keys
     /// </summary>
-    void Update()
-    {
+    void Update() {
 
     }
 
@@ -31,10 +32,8 @@ public class DumpTruckMovement : MonoBehaviour, InteractiveMachine
     /// </summary>
     /// <param name="player">the object trying to interact</param>
     /// <returns>Returns a reference to the machine, or null if the machine is being operated by someone else</returns>
-    public InteractiveMachine StartInteraction(GameObject player)
-    {
-        if (operatingPlayer)
-        {
+    public InteractiveMachine StartInteraction(GameObject player) {
+        if(operatingPlayer) {
             return null;
         }
         operatingPlayer = player;
@@ -49,19 +48,31 @@ public class DumpTruckMovement : MonoBehaviour, InteractiveMachine
     /// End the interaction
     /// </summary>
     /// <param name="player">the object trying to leave the machine</param>
-    public void EndInteraction(GameObject player)
-    {
+    public void EndInteraction(GameObject player) {
         operatingPlayer = null;
         player.transform.parent = null;
         player.transform.position = dismountPosition.position;
         player.transform.rotation = dismountPosition.rotation;
     }
-    public void Operate()
-    {
+    public void Operate() {
         var h = Input.GetAxisRaw("Horizontal");
         var v = Input.GetAxisRaw("Vertical");
         transform.Rotate(0, h * angularSpeed * Time.deltaTime, 0);
         transform.Translate(0, 0, v * speed * Time.deltaTime);
 
+        // rasing and lowering dump truck box
+        var r = Input.GetAxisRaw("Fire1");
+        var l = Input.GetAxisRaw("Fire2");
+        if(r > 0) {
+            dumpTruckDump.Lift(boxRotateSpeed * Time.deltaTime);
+            dumpTruckDump.PlayLiftAudio();
+        }
+        else if (l>0) {
+            dumpTruckDump.Lower(boxRotateSpeed * Time.deltaTime);
+            dumpTruckDump.PlayLiftAudio();
+        }
+        else {
+            dumpTruckDump.StopLiftAudio();
+        }
     }
 }
