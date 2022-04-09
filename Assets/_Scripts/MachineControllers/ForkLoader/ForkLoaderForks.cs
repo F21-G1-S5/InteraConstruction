@@ -5,8 +5,7 @@ using UnityEngine;
 /// <summary>
 /// class ForkLoaderForks handles movement of the "forks or blades" on the front part of the machine.
 /// </summary>
-public class ForkLoaderForks : MonoBehaviour
-{
+public class ForkLoaderForks : MonoBehaviour {
     [SerializeField] GameObject forksGo;
     [SerializeField] float weightLimit;
     [SerializeField] float height = 0;
@@ -19,49 +18,50 @@ public class ForkLoaderForks : MonoBehaviour
 
     private GameObject pickObj;
     private bool pickUp;
+    private SphereCollider sc;
 
-    void Start()
-    {
+    void Start() {
         //forksPos = forksGo.transform.position.y;
+        sc = GetComponent<SphereCollider>();
         Lift(height);
+        weightLimit = 70.0f;
     }
 
- 
-    void Update()
-    {
-        
+
+    void Update() {
+
     }
 
-    public void Lift(float amount)
-    {
-        height += amount;
-        if (height > maxLift)
-        {
+    public void Lift(float amount) {
+        height += amount; 
+        if(height > maxLift) {
             height = maxLift;
         }
-        else
-        {
+        else {
+            PickUpItem();
             forksGo.transform.position = new Vector3(
                 forksGo.transform.position.x,
                 root.position.y + height,
                 forksGo.transform.position.z);
+            Vector3 h = new Vector3(0, amount, 0);
+            sc.center += h;
         }
 
     }
 
-    public void Lower(float amount)
-    {
+    public void Lower(float amount) {
         height -= amount;
-        if (height < 0)
-        {
+        if(height < 0) {
             height = 0;
+            PutDownItem();
         }
-        else
-        {
+        else {
             forksGo.transform.position = new Vector3(
                 forksGo.transform.position.x,
                 root.position.y + height,
                 forksGo.transform.position.z);
+            Vector3 h = new Vector3(0, amount, 0);
+            sc.center -= h;
         }
 
     }
@@ -71,8 +71,9 @@ public class ForkLoaderForks : MonoBehaviour
     /// </summary>
     public void PickUpItem() {
         if(pickUp) {
+            forksGo.GetComponent<Rigidbody>().detectCollisions = true;
             pickObj.GetComponent<Rigidbody>().isKinematic = true;
-            pickObj.transform.parent = this.gameObject.transform;
+            pickObj.transform.parent = forksGo.transform;
         }
     }
 
@@ -83,12 +84,10 @@ public class ForkLoaderForks : MonoBehaviour
         if(pickObj == null) {
             return;
         }
+        forksGo.GetComponent<Rigidbody>().detectCollisions = false;
         pickUp = false;
         pickObj.transform.parent = null;
         pickObj.GetComponent<Rigidbody>().isKinematic = false;
-        // temporary fix for object parenting bug in multiplayer
-        pickObj.transform.position = gameObject.transform.position;
-        pickObj.transform.rotation = gameObject.transform.rotation;
     }
 
     /// <summary>
@@ -111,36 +110,29 @@ public class ForkLoaderForks : MonoBehaviour
         }
     }
 
-    public void PlayLiftAudio()
-    {
-        if (!LiftAudio.isPlaying)
-        {
+    public void PlayLiftAudio() {
+        if(!LiftAudio.isPlaying) {
             LiftAudio.Play();
         }
     }
 
-    public void StopLiftAudio()
-    {
+    public void StopLiftAudio() {
         LiftAudio.Stop();
     }
 
-    public void PlayStartUpAudio()
-    {
+    public void PlayStartUpAudio() {
         startUpAudio.Play();
     }
 
-    public void StopStartUpAudio()
-    {
+    public void StopStartUpAudio() {
         startUpAudio.Stop();
     }
 
-    public void PlayIdleAudio()
-    {
+    public void PlayIdleAudio() {
         idleAudio.PlayDelayed(startUpAudio.clip.length); //play audio after startup clip has ended
     }
 
-    public void StopIdleAudio()
-    {
+    public void StopIdleAudio() {
         idleAudio.Stop();
     }
 }

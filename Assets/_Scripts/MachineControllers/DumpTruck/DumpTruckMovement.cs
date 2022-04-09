@@ -9,7 +9,7 @@ public class DumpTruckMovement : MonoBehaviour, InteractiveMachine {
     float angularSpeed = 45.0f;
 
     [SerializeField] DumpTruckDump dumpTruckDump;
-    [SerializeField] float boxRotateSpeed = 0.2f;
+    [SerializeField] float boxRotateSpeed = 0.05f;
 
     [SerializeField] private Transform operatingPosition;
     [SerializeField] private Transform dismountPosition;
@@ -24,7 +24,7 @@ public class DumpTruckMovement : MonoBehaviour, InteractiveMachine {
     /// method <c>Update</c> calls lifting and lowering methods of the scissorlift when the player hits the Z and C keys
     /// </summary>
     void Update() {
-
+        
     }
 
     /// <summary>
