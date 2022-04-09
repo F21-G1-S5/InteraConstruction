@@ -61239,6 +61239,10 @@ PrefabInstance:
       propertyPath: checkpoint3
       value: 
       objectReference: {fileID: 11400000, guid: 80cbf5b297224894cbfbbd28827c1c61, type: 2}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: checkpoint4
+      value: 
+      objectReference: {fileID: 11400000, guid: 34b5e16bc942f5842ac1d11aec250695, type: 2}
     - target: {fileID: 160151701354990218, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
       propertyPath: m_RootOrder
       value: 2
