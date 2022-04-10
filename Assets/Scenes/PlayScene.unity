@@ -10170,7 +10170,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 468405769}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &369794076
 MonoBehaviour:
@@ -10189,11 +10189,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e825708df3035c0438b86cbcf1758f60, type: 2}
   - {fileID: 11400000, guid: df6944c63b93a5946830c6e004ad5256, type: 2}
   - {fileID: 11400000, guid: ef54b545fb527214e8090dbde2d37670, type: 2}
-  BulldozerProgressPoint1: {fileID: 0}
-  BulldozerProgressPoint2: {fileID: 0}
-  BulldozerProgressPoint3: {fileID: 0}
-  BulldozerProgressPoint4: {fileID: 0}
-  BDProgressPointsCompleted: {fileID: 0}
   uiText: {fileID: 888742301}
 --- !u!1001 &373178728
 PrefabInstance:
@@ -11811,6 +11806,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4719498968730246, guid: a2fe7f9dc74a5ff4696014f411430c80, type: 3}
   m_PrefabInstance: {fileID: 1422554957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &429886245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429886246}
+  - component: {fileID: 429886247}
+  m_Layer: 0
+  m_Name: MasterProgressManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429886246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429886245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468405769}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &429886247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429886245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ef000ecd2c04148b0b189d55a25109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressTokens:
+  - {fileID: 11400000, guid: 457161318455a2e4fbfcc3aa4d504dfa, type: 2}
+  - {fileID: 11400000, guid: 22c8574eb830bef4883622816d38845d, type: 2}
+  - {fileID: 11400000, guid: c54e049c821827a45ae30f38b18b68e9, type: 2}
+  - {fileID: 11400000, guid: 6a04b095e20e61c478b949009b0e3b90, type: 2}
+  - {fileID: 11400000, guid: f4f4abaf02e0d7d499d3732fa9357962, type: 2}
+  - {fileID: 11400000, guid: cae237814ae8c44479fb95977476b675, type: 2}
+  - {fileID: 11400000, guid: 80cbf5b297224894cbfbbd28827c1c61, type: 2}
+  - {fileID: 11400000, guid: 34b5e16bc942f5842ac1d11aec250695, type: 2}
+  - {fileID: 11400000, guid: 1a87dd0dd54c7a0408af1af706b006b4, type: 2}
+  - {fileID: 11400000, guid: e825708df3035c0438b86cbcf1758f60, type: 2}
+  - {fileID: 11400000, guid: df6944c63b93a5946830c6e004ad5256, type: 2}
+  - {fileID: 11400000, guid: ef54b545fb527214e8090dbde2d37670, type: 2}
 --- !u!1001 &432021589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12688,6 +12739,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 429886246}
   - {fileID: 1057164890}
   - {fileID: 1629352795}
   - {fileID: 369794075}
@@ -29646,11 +29698,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22c8574eb830bef4883622816d38845d, type: 2}
   - {fileID: 11400000, guid: c54e049c821827a45ae30f38b18b68e9, type: 2}
   - {fileID: 11400000, guid: 6a04b095e20e61c478b949009b0e3b90, type: 2}
-  BulldozerProgressPoint1: {fileID: 0}
-  BulldozerProgressPoint2: {fileID: 0}
-  BulldozerProgressPoint3: {fileID: 0}
-  BulldozerProgressPoint4: {fileID: 0}
-  BDProgressPointsCompleted: {fileID: 0}
   uiText: {fileID: 1163535163}
 --- !u!4 &1057164890
 Transform:
@@ -29664,7 +29711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 468405769}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1061645736
 PrefabInstance:
@@ -47982,7 +48029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 468405769}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1629352796
 MonoBehaviour:
@@ -48001,11 +48048,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cae237814ae8c44479fb95977476b675, type: 2}
   - {fileID: 11400000, guid: 80cbf5b297224894cbfbbd28827c1c61, type: 2}
   - {fileID: 11400000, guid: 34b5e16bc942f5842ac1d11aec250695, type: 2}
-  BulldozerProgressPoint1: {fileID: 1634331035}
-  BulldozerProgressPoint2: {fileID: 1541278446}
-  BulldozerProgressPoint3: {fileID: 359605029}
-  BulldozerProgressPoint4: {fileID: 1015664811}
-  BDProgressPointsCompleted: {fileID: 1235935344}
   uiText: {fileID: 699303101}
 --- !u!1001 &1631346189
 PrefabInstance:
@@ -61631,6 +61673,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1648757461}
+    - target: {fileID: 3718095447597754107, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
+      propertyPath: masterProgressManager
+      value: 
+      objectReference: {fileID: 429886247}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d6772e40c0255244acd4302a3d0ed2e, type: 3}
 --- !u!1001 &4098203729838515415
