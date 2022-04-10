@@ -9993,6 +9993,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
   m_PrefabInstance: {fileID: 357579506}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &359605029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 359605030}
+  - component: {fileID: 359605032}
+  - component: {fileID: 359605031}
+  m_Layer: 5
+  m_Name: BulldozerPP3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &359605030
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359605029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2043350909}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 93, y: 225}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &359605031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359605029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7830189, g: 0.05490196, b: 0.05490196, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Move the blade UP
+
+'
+--- !u!222 &359605032
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359605029}
+  m_CullTransparentMesh: 1
 --- !u!4 &362130830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4963943503134346, guid: c779e092331d4e64bbb3f86815f17dab, type: 3}
@@ -10108,6 +10189,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e825708df3035c0438b86cbcf1758f60, type: 2}
   - {fileID: 11400000, guid: df6944c63b93a5946830c6e004ad5256, type: 2}
   - {fileID: 11400000, guid: ef54b545fb527214e8090dbde2d37670, type: 2}
+  BulldozerProgressPoint1: {fileID: 0}
+  BulldozerProgressPoint2: {fileID: 0}
+  BulldozerProgressPoint3: {fileID: 0}
+  BulldozerProgressPoint4: {fileID: 0}
+  BDProgressPointsCompleted: {fileID: 0}
   uiText: {fileID: 888742301}
 --- !u!1001 &373178728
 PrefabInstance:
@@ -27771,6 +27857,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3500016057529191995, guid: 73794d632ff80d24f9aab785533e482b, type: 3}
   m_PrefabInstance: {fileID: 1662265982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1015664811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015664812}
+  - component: {fileID: 1015664814}
+  - component: {fileID: 1015664813}
+  m_Layer: 5
+  m_Name: BulldozerPP4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1015664812
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015664811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2043350909}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 93, y: 209}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1015664813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015664811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.78431374, g: 0.05490196, b: 0.05490196, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Move the blade DOWN
+--- !u!222 &1015664814
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015664811}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1019769086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29481,6 +29646,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22c8574eb830bef4883622816d38845d, type: 2}
   - {fileID: 11400000, guid: c54e049c821827a45ae30f38b18b68e9, type: 2}
   - {fileID: 11400000, guid: 6a04b095e20e61c478b949009b0e3b90, type: 2}
+  BulldozerProgressPoint1: {fileID: 0}
+  BulldozerProgressPoint2: {fileID: 0}
+  BulldozerProgressPoint3: {fileID: 0}
+  BulldozerProgressPoint4: {fileID: 0}
+  BDProgressPointsCompleted: {fileID: 0}
   uiText: {fileID: 1163535163}
 --- !u!4 &1057164890
 Transform:
@@ -34181,6 +34351,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 492910, guid: 380c131da968d424ab4902f967bc23d5, type: 3}
   m_PrefabInstance: {fileID: 1231229645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1235935344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235935345}
+  - component: {fileID: 1235935347}
+  - component: {fileID: 1235935346}
+  m_Layer: 5
+  m_Name: BulldozerCompleted
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1235935345
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235935344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2043350909}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 93, y: 250}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1235935346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235935344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.058615133, g: 0.95686275, b: 0.06578707, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 87234a9d13698654bb0d237fbcff721c, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Bulldozer Chechpoints \nCOMPLETED!!"
+--- !u!222 &1235935347
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235935344}
+  m_CullTransparentMesh: 1
 --- !u!1 &1236042059
 GameObject:
   m_ObjectHideFlags: 0
@@ -44744,6 +44993,87 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1541278446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1541278447}
+  - component: {fileID: 1541278449}
+  - component: {fileID: 1541278448}
+  m_Layer: 5
+  m_Name: BulldozerPP2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1541278447
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541278446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2043350909}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 93, y: 240}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1541278448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541278446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7830189, g: 0.054663554, b: 0.054663554, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Rotate the Bulldozer
+
+'
+--- !u!222 &1541278449
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541278446}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1544333219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47670,6 +48000,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4f4abaf02e0d7d499d3732fa9357962, type: 2}
   - {fileID: 11400000, guid: cae237814ae8c44479fb95977476b675, type: 2}
   - {fileID: 11400000, guid: 80cbf5b297224894cbfbbd28827c1c61, type: 2}
+  - {fileID: 11400000, guid: 34b5e16bc942f5842ac1d11aec250695, type: 2}
+  BulldozerProgressPoint1: {fileID: 1634331035}
+  BulldozerProgressPoint2: {fileID: 1541278446}
+  BulldozerProgressPoint3: {fileID: 359605029}
+  BulldozerProgressPoint4: {fileID: 1015664811}
+  BDProgressPointsCompleted: {fileID: 1235935344}
   uiText: {fileID: 699303101}
 --- !u!1001 &1631346189
 PrefabInstance:
@@ -47745,6 +48081,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4558070733231408, guid: a9da80f587bbf9046aefc4a4cfb8a7fc, type: 3}
   m_PrefabInstance: {fileID: 208523397}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1634331035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634331036}
+  - component: {fileID: 1634331038}
+  - component: {fileID: 1634331037}
+  m_Layer: 5
+  m_Name: BulldozerPP1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1634331036
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634331035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2043350909}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 93, y: 256}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1634331037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634331035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.78431374, g: 0.05490196, b: 0.05490196, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Move the Bulldozer Fordwards and Backwards
+--- !u!222 &1634331038
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634331035}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1634332595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58273,6 +58688,11 @@ RectTransform:
   - {fileID: 161152413}
   - {fileID: 1217067083}
   - {fileID: 522736546}
+  - {fileID: 1634331036}
+  - {fileID: 1541278447}
+  - {fileID: 359605030}
+  - {fileID: 1015664812}
+  - {fileID: 1235935345}
   m_Father: {fileID: 1453861080}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61233,6 +61653,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1217067082}
     - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: BDPO1Text
+      value: 
+      objectReference: {fileID: 1634331035}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: BDPP1Text
+      value: 
+      objectReference: {fileID: 1634331035}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: BDPP2Text
+      value: 
+      objectReference: {fileID: 1541278446}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: BDPP3Text
+      value: 
+      objectReference: {fileID: 359605029}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: BDPP4Text
+      value: 
+      objectReference: {fileID: 1015664811}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
       propertyPath: activator
       value: 116
       objectReference: {fileID: 0}
@@ -61252,6 +61692,10 @@ PrefabInstance:
       propertyPath: checkpoint4
       value: 
       objectReference: {fileID: 11400000, guid: 34b5e16bc942f5842ac1d11aec250695, type: 2}
+    - target: {fileID: 270749045, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
+      propertyPath: BDPPsCompletedText
+      value: 
+      objectReference: {fileID: 1235935344}
     - target: {fileID: 160151701354990218, guid: b03b6026b30bf8b42922e886189fa060, type: 3}
       propertyPath: m_RootOrder
       value: 2
