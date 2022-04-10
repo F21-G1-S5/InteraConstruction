@@ -4353,7 +4353,7 @@ MonoBehaviour:
 
     To see the tutorial press "T"
 
-    To use Machine press
+    To use/exit Machine press
     "E"'
 --- !u!222 &161152415
 CanvasRenderer:
@@ -11151,8 +11151,8 @@ MonoBehaviour:
 
     To see the tutorial press "T"
 
-    To use Machine press
-    "E"'
+    To use/exit Machine
+    press "E"'
 --- !u!222 &406907325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20300,8 +20300,8 @@ MonoBehaviour:
 
     To see the tutorial press "T"
 
-    To use Machine press
-    "E"'
+    To use/exit Machine
+    press "E"'
 --- !u!222 &739705197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49287,8 +49287,8 @@ MonoBehaviour:
 
     To see the tutorial press "T"
 
-    To use Machine press
-    "E"'
+    To use/exit Machine
+    press "E"'
 --- !u!222 &1684352287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49617,8 +49617,8 @@ MonoBehaviour:
 
     To see the tutorial press "T"
 
-    To use Machine press
-    "E"'
+    To use/exit Machine
+    press "E"'
 --- !u!222 &1690339530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60689,6 +60689,15 @@ PrefabInstance:
     - target: {fileID: 399075521526390817, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399075521700840913, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
+      propertyPath: m_Text
+      value: 'Crane
+
+        To see the tutorial press "T"
+
+        To use/exit Machine
+        press "E"'
       objectReference: {fileID: 0}
     - target: {fileID: 399075522042839294, guid: 6f0c9edbf5f2eab4d87dd5b17c739c89, type: 3}
       propertyPath: m_Text
