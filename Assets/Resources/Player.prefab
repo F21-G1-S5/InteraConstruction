@@ -55,6 +55,9 @@ MonoBehaviour:
   playerCam: {fileID: 7130258971957566620}
   moveInput: {x: 0, y: 0, z: 0}
   move: {x: 0, y: 0, z: 0}
+  progressionPanelCrane: {fileID: 0}
+  progressionPanelBulldozer: {fileID: 0}
+  progressionPanelForkloader: {fileID: 0}
 --- !u!143 &7130258971569941151
 CharacterController:
   m_ObjectHideFlags: 0
@@ -93,7 +96,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6474213904480041525}
-  - {fileID: 8938029503921432543}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

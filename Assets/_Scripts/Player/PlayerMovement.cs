@@ -52,6 +52,12 @@ public class PlayerMovement : MonoBehaviour{
                 {
                     pr.player = this.gameObject;
                 }
+                // also link with the minimap
+                Minimap mm = FindObjectOfType<Minimap>();
+                if (mm)
+                {
+                    mm.player = this.gameObject.transform;
+                }
             }
         }
     }
