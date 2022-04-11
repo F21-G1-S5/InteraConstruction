@@ -84,6 +84,11 @@ public static class PlayFabDataManager
             {
                 if (result.Data != null)
                 {
+                    if (result.Data.ContainsKey("userType"))
+                    {
+                        userType = result.Data["userType"].Value;
+                    }
+
                     if (result.Data.ContainsKey("position"))
                     {
                         pData.position = CSVToArray(result.Data["position"].Value);
@@ -114,6 +119,11 @@ public static class PlayFabDataManager
             {
                 if (result.Data != null)
                 {
+                    if (result.Data.ContainsKey("userType"))
+                    {
+                        userType = result.Data["userType"].Value;
+                    }
+
                     if (result.Data.ContainsKey("position"))
                     {
                         pData.position = CSVToArray(result.Data["position"].Value);
