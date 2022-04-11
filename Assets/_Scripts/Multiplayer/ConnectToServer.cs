@@ -11,6 +11,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public GameObject joinBtn;
     public GameObject lblLoad;
 
+    public string[] allowedHosts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +27,17 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         lblLoad.SetActive(false);
-        hostBtn.SetActive(true);
         joinBtn.SetActive(true);
+
+        string userType = PlayFabDataManager.GetUserType();
+        foreach (string role in allowedHosts)
+        {
+            if (role == userType)
+            {
+                hostBtn.SetActive(true);
+                break;
+            }
+        }
     }
 
 

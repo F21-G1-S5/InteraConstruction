@@ -15,6 +15,9 @@ public class PlayerData
     // player rotation
     public float[] rotation;
 
+    // player progress
+    public bool[] progress;
+
     // TODO: when someone creates the player controller, we need to change the parameter type from 'GameObject' to the more
     //       specific player object.
     public PlayerData(GameObject go)
@@ -29,6 +32,37 @@ public class PlayerData
         rotation[1] = go.transform.localRotation.y;
         rotation[2] = go.transform.localRotation.z;
         rotation[3] = go.transform.localRotation.w;
+    }
+
+    public PlayerData(GameObject go, bool[] progressPoints)
+        : this(go)
+    {
+        progress = progressPoints;
+    }
+
+    // copy constructor
+    public PlayerData(PlayerData pData)
+    {
+        position = new float[3];
+        position[0] = pData.position[0];
+        position[1] = pData.position[1];
+        position[2] = pData.position[2];
+
+        rotation = new float[4];
+        rotation[0] = pData.rotation[0];
+        rotation[1] = pData.rotation[1];
+        rotation[2] = pData.rotation[2];
+        rotation[3] = pData.rotation[3];
+
+        if (pData.progress != null)
+        {
+            progress = new bool[pData.progress.Length];
+
+            for (int i = 0; i < pData.progress.Length; i++)
+            {
+                progress[i] = pData.progress[i];
+            }
+        }
     }
 
     /// <summary>

@@ -15,16 +15,17 @@ public class SOProgressPoint : ScriptableObject
     // Passively keeping track of progress is cool and all, but we may want to do something
     // when something gets completed. In this case, we'll save a callback function and notify
     // the progress manager that progress was updated.
-    private UnityEvent OnCompleted;
+    private UnityEvent OnComplete;
 
     public void Listen(UnityAction onCompleted)
     {
-        OnCompleted.AddListener(onCompleted);
+        OnComplete = new UnityEvent();
+        OnComplete.AddListener(onCompleted);
     }
 
     public void SetCompleted()
     {
         IsCompleted = true;
-        OnCompleted.Invoke();
+        OnComplete.Invoke();
     }
 }

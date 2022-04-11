@@ -1678,6 +1678,9 @@ MonoBehaviour:
   hostBtn: {fileID: 1259558882}
   joinBtn: {fileID: 1834030969}
   lblLoad: {fileID: 1729896193}
+  allowedHosts:
+  - Instructor
+  - Construction Company
 --- !u!1 &1729896193
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class Pause_Resume : MonoBehaviour
 {
     public GameObject player;
+    public SceneProgressManager masterProgressManager;
 
     public GameObject targetMenu;
     public bool isGamePausable = true;
@@ -75,13 +76,31 @@ public class Pause_Resume : MonoBehaviour
             return;
         }
 
-        if (usePlayFabSave)
+        if (masterProgressManager == null)
         {
-            PlayFabDataManager.SaveUserData(player);
+            // if there is no master progress manager in the scene
+            // we just worry about saving the player's position/rotation
+            if (usePlayFabSave)
+            {
+                PlayFabDataManager.SaveUserData(player);
+            }
+            else
+            {
+                JSONSaveSystem.SavePlayer(player, "savefile1");
+            }
         }
         else
         {
-            JSONSaveSystem.SavePlayer(player, "savefile1");
+            // given a player object and a collection of progess tokens
+            // we want to save everything
+            if (usePlayFabSave)
+            {
+                PlayFabDataManager.SaveUserData(player, masterProgressManager.GetProgressBools());
+            }
+            else
+            {
+                JSONSaveSystem.SavePlayer(player, "savefile1");
+            }
         }
     }
 
