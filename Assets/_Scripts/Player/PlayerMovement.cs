@@ -143,6 +143,12 @@ public class PlayerMovement : MonoBehaviour{
                     
 
                     operatingMachine = machine.StartInteraction(gameObject);
+                    if(collider.gameObject.GetComponent<PhotonView>() != null)
+                    {
+
+                        collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
+                        Debug.Log(collider.gameObject.GetComponent<PhotonView>().sceneViewId);
+                    }
                     if (operatingMachine != null)
                     {
                         cc.enabled = false;
