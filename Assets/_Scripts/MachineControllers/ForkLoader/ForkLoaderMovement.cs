@@ -27,18 +27,7 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     [SerializeField] private SOProgressPoint checkpoint2;
     [SerializeField] private SOProgressPoint checkpoint3;
     [SerializeField] private SOProgressPoint checkpoint4;
-
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-    }
-
-
+    [SerializeField] private GameObject progressionPanelForkloader;
 
     /// <summary>
     /// When the player presses the interact key, call this function
@@ -61,6 +50,11 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         if (pc)
         {
             pc.SetPlayerSitting();
+
+            if (pc.isLocalPlayer())
+            {
+                progressionPanelForkloader.SetActive(true);
+            }
         }
 
         forks.PlayStartUpAudio();
@@ -81,6 +75,8 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         player.transform.parent = null;
         player.transform.position = dismountPosition.position;
         player.transform.rotation = dismountPosition.rotation;
+
+        progressionPanelForkloader.SetActive(false);
     }
 
     /// <summary>
@@ -109,7 +105,7 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         //Progression Related: check if player drove the bulldozer
         if (v > 0)
         {
-            if (!checkpoint2.IsCompleted)
+            if (checkpoint1.IsCompleted && !checkpoint2.IsCompleted)
             {
                 checkpoint2.SetCompleted();
             }
@@ -130,7 +126,7 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             forks.Lower(forksSpeed * Time.deltaTime);
             forks.PlayLiftAudio();
 
-            if (!checkpoint3.IsCompleted)
+            if (checkpoint2.IsCompleted && !checkpoint3.IsCompleted)
             {
                 checkpoint3.SetCompleted();
             }
@@ -145,7 +141,7 @@ public class ForkLoaderMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             forks.PickUpItem();
 
 
-            if (!checkpoint4.IsCompleted)
+            if (checkpoint3.IsCompleted && !checkpoint4.IsCompleted)
             {
                 checkpoint4.SetCompleted();
             }

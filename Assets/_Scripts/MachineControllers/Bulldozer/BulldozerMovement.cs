@@ -35,6 +35,7 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     [SerializeField] private SOProgressPoint checkpoint2;
     [SerializeField] private SOProgressPoint checkpoint3;
     [SerializeField] private SOProgressPoint checkpoint4;
+    [SerializeField] private GameObject progressionPanelBulldozer;
 
     // Start is called before the first frame update
     void Start()
@@ -67,12 +68,16 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         player.transform.position = operatingPosition.position;
         player.transform.rotation = operatingPosition.rotation;
         player.transform.parent = operatingPosition;
-        int r = player.GetInstanceID();
 
         PlayerMovement pc = player.GetComponent<PlayerMovement>();
         if (pc)
         {
             pc.SetPlayerSitting();
+
+            if (pc.isLocalPlayer())
+            {
+                progressionPanelBulldozer.SetActive(true);
+            }
         }
 
         dozerBlade.PlayStartUpAudio();
@@ -103,6 +108,8 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             progressCounter = true; // Logic to know that the player exited the Bulldozer with all checkpoints done so in case
                                     //the same player wants to enter the Bulldozer again, the checkpoints don´t reappear.
         }
+
+        progressionPanelBulldozer.SetActive(false);
     }
 
     /// <summary>
@@ -145,7 +152,7 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         //Progression Related: check if player drove the bulldozer
         if (v > 0)
         {
-            if (!checkpoint2.IsCompleted)
+            if (checkpoint1.IsCompleted && !checkpoint2.IsCompleted)
             {
                 checkpoint2.SetCompleted();
             }
@@ -160,7 +167,7 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             BDPP3Text.SetActive(false);
             dozerBlade.Lift(bladeSpeed * Time.deltaTime);
             dozerBlade.PlayLiftAudio();
-            if (!checkpoint3.IsCompleted)
+            if (checkpoint2.IsCompleted && !checkpoint3.IsCompleted)
             {
                 checkpoint3.SetCompleted();
             }
@@ -170,7 +177,7 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             BDPP4Text.SetActive(false);
             dozerBlade.Lower(bladeSpeed * Time.deltaTime);
             dozerBlade.PlayLiftAudio();
-            if (!checkpoint4.IsCompleted)
+            if (checkpoint3.IsCompleted && !checkpoint4.IsCompleted)
             {
                 checkpoint4.SetCompleted();
             }
