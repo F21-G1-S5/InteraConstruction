@@ -1226,6 +1226,10 @@ MonoBehaviour:
   forksSpeed: 1
   tutorialPanelActivator: 116
   target: {fileID: 0}
+  checkpoint1: {fileID: 11400000, guid: 1a87dd0dd54c7a0408af1af706b006b4, type: 2}
+  checkpoint2: {fileID: 11400000, guid: e825708df3035c0438b86cbcf1758f60, type: 2}
+  checkpoint3: {fileID: 11400000, guid: df6944c63b93a5946830c6e004ad5256, type: 2}
+  checkpoint4: {fileID: 11400000, guid: ef54b545fb527214e8090dbde2d37670, type: 2}
 --- !u!114 &4978795731949386447
 MonoBehaviour:
   m_ObjectHideFlags: 0

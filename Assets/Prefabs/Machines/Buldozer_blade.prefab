@@ -115,6 +115,8 @@ MonoBehaviour:
   maxLift: 0.4
   lift: 0.1
   LiftAudio: {fileID: 76844006507489673}
+  startUpAudio: {fileID: 0}
+  idleAudio: {fileID: 0}
 --- !u!65 &270749042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160,6 +162,15 @@ MonoBehaviour:
   dismountPosition: {fileID: 44021451}
   activator: 0
   target: {fileID: 0}
+  BDPP1Text: {fileID: 0}
+  BDPP2Text: {fileID: 0}
+  BDPP3Text: {fileID: 0}
+  BDPP4Text: {fileID: 0}
+  BDPPsCompletedText: {fileID: 0}
+  checkpoint1: {fileID: 11400000, guid: f4f4abaf02e0d7d499d3732fa9357962, type: 2}
+  checkpoint2: {fileID: 11400000, guid: cae237814ae8c44479fb95977476b675, type: 2}
+  checkpoint3: {fileID: 11400000, guid: 80cbf5b297224894cbfbbd28827c1c61, type: 2}
+  checkpoint4: {fileID: 11400000, guid: 34b5e16bc942f5842ac1d11aec250695, type: 2}
 --- !u!82 &76844006507489673
 AudioSource:
   m_ObjectHideFlags: 0
