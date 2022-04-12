@@ -98,7 +98,9 @@ public class PlayFabManager : MonoBehaviour
             }
         };
         PlayFabClientAPI.UpdateUserData(userTypeRequest,
-            (UpdateUserDataResult result) => { Debug.Log("Sucessfully registered user type " + userType); },
+            (UpdateUserDataResult result) => {
+                Debug.Log("Sucessfully registered user type " + userType);
+                PlayFabDataManager.LoadUserData(); },
             OnError);
     }
 

@@ -760,6 +760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weightLimit: 100
   pickUp: 0
+  checkpoint4: {fileID: 0}
 --- !u!1 &2191424126673458231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,8 +1357,12 @@ MonoBehaviour:
   hookSpeed: 5
   operatingPosition: {fileID: 183208717}
   dismountPosition: {fileID: 1842570788}
-  activator: 0
+  tutorialPanelActivator: 0
   target: {fileID: 0}
+  checkpoint1: {fileID: 11400000, guid: 457161318455a2e4fbfcc3aa4d504dfa, type: 2}
+  checkpoint2: {fileID: 11400000, guid: 22c8574eb830bef4883622816d38845d, type: 2}
+  checkpoint3: {fileID: 11400000, guid: c54e049c821827a45ae30f38b18b68e9, type: 2}
+  checkpoint4: {fileID: 11400000, guid: 6a04b095e20e61c478b949009b0e3b90, type: 2}
 --- !u!82 &3725749539121332569
 AudioSource:
   m_ObjectHideFlags: 0

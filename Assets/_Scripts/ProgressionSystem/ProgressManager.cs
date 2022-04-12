@@ -20,8 +20,6 @@ public class ProgressManager : MonoBehaviour
         if (currentProgress >= progressPoints.Length)
         {
             uiText.text = "All Objectives Completed!";
-
-
         }
         else
         {

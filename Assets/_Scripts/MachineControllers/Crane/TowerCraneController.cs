@@ -27,6 +27,7 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
     [SerializeField] private SOProgressPoint checkpoint2;
     [SerializeField] private SOProgressPoint checkpoint3;
     [SerializeField] private SOProgressPoint checkpoint4;
+    [SerializeField] private GameObject progressionPanelCrane;
 
     // Update is called once per frame
     void Update()
@@ -54,6 +55,10 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
         if (pc)
         {
             pc.SetPlayerSitting();
+            if (pc.isLocalPlayer())
+            {
+                progressionPanelCrane.SetActive(true);
+            }
         }
 
         return this;
@@ -69,6 +74,8 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
         player.transform.parent = null;
         player.transform.position = dismountPosition.position;
         player.transform.rotation = dismountPosition.rotation;
+
+        progressionPanelCrane.SetActive(false);
     }
 
     /// <summary>
@@ -81,7 +88,7 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
         if (Input.GetKey(KeyCode.W))
         {
             crane.MoveTruck(-truckSpeed * Time.deltaTime);
-            if (!checkpoint2.IsCompleted)
+            if (checkpoint1.IsCompleted && !checkpoint2.IsCompleted)
             {
                 checkpoint2.SetCompleted();
             }
@@ -96,7 +103,7 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
         if (Input.GetKey(KeyCode.Z))
         {
             crane.MoveHook(-hookSpeed * Time.deltaTime);
-            if (!checkpoint3.IsCompleted)
+            if (checkpoint2.IsCompleted && !checkpoint3.IsCompleted)
             {
                 checkpoint3.SetCompleted();
             }
@@ -124,7 +131,7 @@ public class TowerCraneController : MonoBehaviour, InteractiveMachine
         if (Input.GetKeyDown(KeyCode.G))
         {
             craneHook.PickUpItem();
-            if (!checkpoint4.IsCompleted)
+            if (checkpoint3.IsCompleted && !checkpoint4.IsCompleted)
             {
                 checkpoint4.SetCompleted();
             }

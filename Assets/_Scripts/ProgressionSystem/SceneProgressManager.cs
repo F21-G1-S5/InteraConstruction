@@ -14,7 +14,7 @@ public class SceneProgressManager : MonoBehaviour
     [SerializeField] private SOProgressPoint[] progressTokens;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PlayerData pData = PlayFabDataManager.GetCachedData();
 
