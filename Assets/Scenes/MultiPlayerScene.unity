@@ -28441,7 +28441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialScreen: {fileID: 599744515}
-  minimap: {fileID: 0}
+  minimap: {fileID: 258147458}
   prompt: {fileID: 21879022}
 --- !u!114 &1051293307
 MonoBehaviour:

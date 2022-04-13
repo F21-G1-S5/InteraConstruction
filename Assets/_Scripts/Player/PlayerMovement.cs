@@ -126,24 +126,6 @@ public class PlayerMovement : MonoBehaviour{
                 if (machine != null)
                 {
 
-                    //Identify each machine, to activate its correspondent UI Progression panel
-                    Debug.Log(machine);
-                    switch (machine.ToString())
-                    {
-                        case "towerCrane_1 (TowerCraneController)":
-                            progressionPanelCrane.SetActive(true);
-                            break;
-                        case "Buldozer_blade (BulldozerMovement)":
-                            progressionPanelBulldozer.SetActive(true);
-                            break;
-                        case "Fork Loader (ForkLoaderMovement)":
-                            progressionPanelForkloader.SetActive(true);
-                            break;
-
-                    }
-                    
-
-
                     if(collider.gameObject.GetComponent<PhotonView>() != null)
                     {
 
