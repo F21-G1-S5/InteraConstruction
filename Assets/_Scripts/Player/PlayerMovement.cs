@@ -125,12 +125,11 @@ public class PlayerMovement : MonoBehaviour{
                 InteractiveMachine machine = collider.gameObject.GetComponent<InteractiveMachine>();
                 if (machine != null)
                 {
-
+                    //Check for Photon view of the Machine
                     if(collider.gameObject.GetComponent<PhotonView>() != null)
                     {
-
+                        //If photon view is found, then makes the local player as the owner of that machine.
                         collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-                        Debug.Log(collider.gameObject.GetComponent<PhotonView>().sceneViewId);
                     }
 
                     operatingMachine = machine.StartInteraction(this.gameObject);
