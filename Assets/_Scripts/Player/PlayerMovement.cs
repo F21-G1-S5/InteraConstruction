@@ -125,30 +125,11 @@ public class PlayerMovement : MonoBehaviour{
                 InteractiveMachine machine = collider.gameObject.GetComponent<InteractiveMachine>();
                 if (machine != null)
                 {
-
-                    //Identify each machine, to activate its correspondent UI Progression panel
-                    Debug.Log(machine);
-                    switch (machine.ToString())
-                    {
-                        case "towerCrane_1 (TowerCraneController)":
-                            progressionPanelCrane.SetActive(true);
-                            break;
-                        case "Buldozer_blade (BulldozerMovement)":
-                            progressionPanelBulldozer.SetActive(true);
-                            break;
-                        case "Fork Loader (ForkLoaderMovement)":
-                            progressionPanelForkloader.SetActive(true);
-                            break;
-
-                    }
-                    
-
-
+                    //Check for Photon view of the Machine
                     if(collider.gameObject.GetComponent<PhotonView>() != null)
                     {
-
+                        //If photon view is found, then makes the local player as the owner of that machine.
                         collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-                        Debug.Log(collider.gameObject.GetComponent<PhotonView>().sceneViewId);
                     }
 
                     operatingMachine = machine.StartInteraction(this.gameObject);
