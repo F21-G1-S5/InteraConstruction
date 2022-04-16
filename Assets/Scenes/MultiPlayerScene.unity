@@ -12487,6 +12487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1120533507}
   player: {fileID: 0}
+  tManager: {fileID: 0}
 --- !u!114 &458055289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15168,6 +15169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 60740394}
   player: {fileID: 0}
+  tManager: {fileID: 0}
 --- !u!114 &556596024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21658,6 +21660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1536394105}
   player: {fileID: 0}
+  tManager: {fileID: 0}
 --- !u!114 &781148147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33232,6 +33235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 685320353}
   player: {fileID: 0}
+  tManager: {fileID: 0}
 --- !u!114 &1194046537
 MonoBehaviour:
   m_ObjectHideFlags: 0
