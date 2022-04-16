@@ -77,4 +77,23 @@ public class TutorialManager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Reset tutorial manager. Useful in scenarios where the TutorialPrompts don't trigger their respective
+    /// OnTriggerLeave events
+    /// </summary>
+    public void Clear()
+    {
+        for (int i = 0; i <= tutorials.Count; i++)
+        {
+            PromptKeyListener prompt = tutorials[i].GetComponent<PromptKeyListener>();
+            if (prompt)
+            {
+                prompt.TriggerHideTutorial();
+            }
+            tutorials[i].SetActive(false);
+        }
+        tutorials.Clear();
+        head = tutorials.Count;
+    }
 }
