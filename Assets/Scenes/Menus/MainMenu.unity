@@ -1681,6 +1681,8 @@ MonoBehaviour:
   allowedHosts:
   - Instructor
   - Construction Company
+  - Manager
+  - Playtester
 --- !u!1 &1729896193
 GameObject:
   m_ObjectHideFlags: 0

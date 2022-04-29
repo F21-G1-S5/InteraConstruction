@@ -2294,6 +2294,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Construction Company
       m_Image: {fileID: 0}
+    - m_Text: Manager
+      m_Image: {fileID: 0}
+    - m_Text: Playtester
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

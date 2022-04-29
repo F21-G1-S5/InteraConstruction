@@ -65,14 +65,14 @@ public class DumpTruckMovement : MonoBehaviour, InteractiveMachine {
         var l = Input.GetAxisRaw("Fire2");
         if(r > 0) {
             dumpTruckDump.Lift(boxRotateSpeed * Time.deltaTime);
-            dumpTruckDump.PlayLiftAudio();
+            //dumpTruckDump.PlayLiftAudio();
         }
         else if (l>0) {
             dumpTruckDump.Lower(boxRotateSpeed * Time.deltaTime);
-            dumpTruckDump.PlayLiftAudio();
+            //dumpTruckDump.PlayLiftAudio();
         }
         else {
-            dumpTruckDump.StopLiftAudio();
+            //dumpTruckDump.StopLiftAudio();
         }
     }
 }

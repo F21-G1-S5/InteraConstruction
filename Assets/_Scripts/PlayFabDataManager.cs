@@ -161,6 +161,11 @@ public static class PlayFabDataManager
 
     private static float[] CSVToArray(string data)
     {
+        if (data == "")
+        {
+            return new float[0];
+        }
+
         string[] strData = data.Split(',');
         float[] fData = new float[strData.Length];
 
@@ -195,6 +200,11 @@ public static class PlayFabDataManager
 
     private static bool[] CSVToBoolArray(string data)
     {
+        if (data == "")
+        {
+            return new bool[0];
+        }
+
         string[] strData = data.Split(',');
         bool[] fData = new bool[strData.Length];
 
