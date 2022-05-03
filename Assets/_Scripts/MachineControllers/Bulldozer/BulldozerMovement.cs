@@ -11,7 +11,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
 {
     float speed = 5.0f;
     float angularSpeed = 45.0f;
-    bool progressCounter=false;
 
     [SerializeField] DozerBlade dozerBlade; // the blade part of the bulldozer that can move up and down
     [SerializeField] float bladeSpeed = 0.4f;
@@ -21,12 +20,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
 
     public KeyCode activator;
     public GameObject target;
-
-    public GameObject BDPP1Text;
-    public GameObject BDPP2Text;
-    public GameObject BDPP3Text;
-    public GameObject BDPP4Text;
-    public GameObject BDPPsCompletedText;
 
     private GameObject operatingPlayer;
 
@@ -82,10 +75,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
 
         dozerBlade.PlayStartUpAudio();
         dozerBlade.PlayIdleAudio();
-        BDPP1Text.SetActive(true);
-        BDPP2Text.SetActive(true);
-        BDPP3Text.SetActive(true);
-        BDPP4Text.SetActive(true);
 
         return this;
     }
@@ -102,12 +91,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         player.transform.parent = null;
         player.transform.position = dismountPosition.position;
         player.transform.rotation = dismountPosition.rotation;
-        BDPPsCompletedText.SetActive(false);
-        if (checkpoint1.IsCompleted && checkpoint2.IsCompleted && checkpoint3.IsCompleted && checkpoint4.IsCompleted)
-        {
-            progressCounter = true; // Logic to know that the player exited the Bulldozer with all checkpoints done so in case
-                                    //the same player wants to enter the Bulldozer again, the checkpoints don´t reappear.
-        }
 
         progressionPanelBulldozer.SetActive(false);
     }
@@ -118,20 +101,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
     /// </summary>
     public void Operate()
     {
-        if (checkpoint1.IsCompleted && checkpoint2.IsCompleted && checkpoint3.IsCompleted && checkpoint4.IsCompleted)
-        {
-            BDPPsCompletedText.SetActive(true);
-
-            if(progressCounter)
-            {
-                BDPP1Text.SetActive(false);
-                BDPP2Text.SetActive(false);
-                BDPP3Text.SetActive(false);
-                BDPP4Text.SetActive(false);
-                BDPPsCompletedText.SetActive(false);
-            }
-        }
-
         // controls for moving the bulldozer
         var h = Input.GetAxisRaw("Horizontal");
         var v = Input.GetAxisRaw("Vertical");
@@ -146,7 +115,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             {
                 checkpoint1.SetCompleted();
             }
-            BDPP2Text.SetActive(false);
         }
 
         //Progression Related: check if player drove the bulldozer
@@ -156,7 +124,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
             {
                 checkpoint2.SetCompleted();
             }
-            BDPP1Text.SetActive(false);
         }
 
         // controls for raising and lowering the bulldozer blade
@@ -164,7 +131,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         var lower = Input.GetAxis("Fire2");
         if (raise > 0)
         {
-            BDPP3Text.SetActive(false);
             dozerBlade.Lift(bladeSpeed * Time.deltaTime);
             dozerBlade.PlayLiftAudio();
             if (checkpoint2.IsCompleted && !checkpoint3.IsCompleted)
@@ -174,7 +140,6 @@ public class BulldozerMovement : MonoBehaviourPunCallbacks, InteractiveMachine
         }
         else if (lower > 0)
         {
-            BDPP4Text.SetActive(false);
             dozerBlade.Lower(bladeSpeed * Time.deltaTime);
             dozerBlade.PlayLiftAudio();
             if (checkpoint3.IsCompleted && !checkpoint4.IsCompleted)
